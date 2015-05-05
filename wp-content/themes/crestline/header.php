@@ -26,3 +26,4 @@
 // Top Nav
 get_template_part( 'partials/header/fixed_nav' ); ?>
 </div>
+    

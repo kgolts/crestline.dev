@@ -1,12 +1,12 @@
 {
-  "name": "tmbr-common",
+  "name": "kgolts-common",
   "version": "0.1",
-  "homepage": "http://wearetmbr.com",
+  "homepage": "",
   "authors": [
     "Andrew Martin <andrew@believelabs.com>",
     "Matt Richmond <mrichmond@wearetmbr.com>"
   ],
-  "description": "TMBR Common Libraries",
+  "description": "Common Libraries",
   "license": "MIT",
   "private": true,
   "ignore": [

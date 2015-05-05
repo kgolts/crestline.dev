@@ -1,10 +1,10 @@
 <?php
 // Should only need to modify this line
-define( 'DB_NAME', 'tmbr_starter' );
+define( 'DB_NAME', 'crestline_wp' );
 
 // Rest of these can likely stay the same
 define( 'WP_DEBUG', true );
-define( 'WP_DEFAULT_THEME', 'tmbr' );
+define( 'WP_DEFAULT_THEME', 'crestline' );
 
 define( 'WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] );
 define( 'WP_SITEURL', WP_HOME . '/' );
