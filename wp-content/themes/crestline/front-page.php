@@ -1,4 +1,8 @@
+<?php
+// Template Name: Homepage
+?>
 <?php get_header(); ?>
+
 
 <?php
 // Hero Slider
@@ -36,10 +40,10 @@ get_template_part( 'partials/global/fullscreen_slider' ); ?>
 				</div><!-- /col -->
 			</main>
 
-			<?php get_sidebar(); ?>
+		
 
 		</div><!-- /row -->
 	</div><!-- /container -->
 </div><!-- #primary -->
 
-<?php get_footer();
+<?php get_footer();?>

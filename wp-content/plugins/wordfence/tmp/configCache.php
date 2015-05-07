@@ -1,0 +1,4 @@
+<?php
+/* Wordfence temporary file security header */
+echo "Nothing to see here!\n"; exit(0);
+?>a:21:{s:9:"cacheType";s:0:"";s:15:"firewallEnabled";s:1:"1";s:6:"apiKey";s:128:"c3255ff95765b52cce5844a514717b8af9b0f83b1536c7e1febf977b315a1946f629bb710808941ff44af0dc706294c2a528cde00471ba3317962ff77082f933";s:9:"howGetIPs";s:0:"";s:18:"liveTrafficEnabled";s:1:"1";s:14:"disableCookies";s:1:"0";s:10:"tourClosed";s:1:"1";s:10:"autoUpdate";s:1:"1";s:11:"alertEmails";s:18:"kgolts74@gmail.com";s:17:"actUpdateInterval";s:0:"";s:7:"debugOn";s:1:"0";s:13:"welcomeClosed";s:1:"1";s:38:"email_summary_dashboard_widget_enabled";s:1:"1";s:22:"email_summary_interval";s:8:"biweekly";s:11:"whitelisted";s:0:"";s:18:"liveTraf_ignoreIPs";s:0:"";s:17:"liveTraf_ignoreUA";s:0:"";s:19:"other_hideWPVersion";s:1:"1";s:6:"encKey";s:16:"4e928834a48b02d7";s:11:"other_WFNet";s:1:"1";s:25:"liveTraf_ignorePublishers";s:1:"1";}

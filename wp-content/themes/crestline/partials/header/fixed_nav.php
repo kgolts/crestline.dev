@@ -1,7 +1,3 @@
-<?php
-//wp_nav_menu( array( 'theme_location' => 'main-menu','menu_class' => '', 'container_class' => '' ) );
-?>
-
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
