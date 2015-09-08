@@ -14,6 +14,36 @@
 }
 */
 
+.container {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.with-gutter {
+      padding-left: $margins-mobile;
+      padding-right: $margins-mobile;
+    
+    @include respond-to($screen-sm) {
+        padding-left: $margins-main;
+        padding-right:$margins-main;
+        max-width: 1500px - $margins-main;
+        max-width: 1500px - $margins-main;
+    }
+    
+    }
+
+
+
+.col-center-block {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
 
 /* BOOTSTRAP NO-GUTTER */
 .nopad {

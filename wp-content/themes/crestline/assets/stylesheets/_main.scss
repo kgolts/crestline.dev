@@ -1,8 +1,26 @@
 body {
-  color: $drk-green;
-  overflow-x: hidden;
+  color: $white;
+    background-color: #ececec;
+ 
 }
 
+html {
+  
+}
+
+html, body {
+     height: 100%;
+    //overflow-x: hidden;
+}
+
+
+#wrap {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+/* Negative indent footer by it's height */
+margin: 0 auto -60px;
+}
 
 a {
     color: $blue;
@@ -78,4 +96,13 @@ h5,
 	  &.orange {
 	    background-color: $orange;
 	  }
+}
+
+
+#primary.content-area {
+ //margin-top: 70px;
+}
+
+div.page {
+margin-top: 70px;
 }

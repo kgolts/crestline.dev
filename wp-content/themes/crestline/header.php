@@ -20,10 +20,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<div id="wrap">
 <div id="topnav">
 <?php
 // Top Nav
 get_template_part( 'partials/header/dynamic_nav' ); ?>
 </div>
+
     

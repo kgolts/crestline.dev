@@ -16,6 +16,10 @@ $beige : #e9e9de;
 $tan : #f5f4e6;
 $drk-green : #4b431f;
 
+$crest-green: #03b555;
+
+$black-txt: #4f3c32;
+
 /* FONT FAMILIES */
 $proxima: 'proxima-nova', sans-serif;
 
@@ -41,3 +45,12 @@ $fixed-w-sm: 750px;
 
 /* GUTTER */
 $gutter: 15px;
+
+$screen-xl: 1500px; 
+$screen-sm: 769px; 
+
+$margins-main: 47px;
+$margins-mobile: 20px;
+
+//top navigation mobile breakpoint
+$grid-float-breakpoint: $screen-sm;

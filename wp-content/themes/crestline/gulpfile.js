@@ -35,6 +35,9 @@
       // 'assets/vendor/twbs-bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js',
       // 'assets/vendor/twbs-bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js',
       // 'assets/vendor/twbs-bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js',
+        
+      //pushmenu nav js
+        'assets/vendor/bootstrap.push-menu/dist/js/push-menu.js',
 
       // Flexslider things for video
       'assets/vendor/flexslider/jquery.flexslider.js',

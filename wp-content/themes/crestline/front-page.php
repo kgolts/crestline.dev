@@ -9,9 +9,8 @@
 get_template_part( 'partials/global/fullscreen_slider' ); ?>
 
 <div id="primary" class="content-area">
-	<div class="container">
+	<div class="container container-fluid with-gutter">
 		<div class="row">
-			<main id="main" class="site-main" role="main">
 				<div class="col-sm-8">
 
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -38,8 +37,7 @@ get_template_part( 'partials/global/fullscreen_slider' ); ?>
 					</div>
 
 				</div><!-- /col -->
-			</main>
-
+			
 		
 
 		</div><!-- /row -->

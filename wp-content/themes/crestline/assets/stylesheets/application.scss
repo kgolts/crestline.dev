@@ -1,3 +1,10 @@
+@import "mixins";
+//variables
+@import "variables";
+
+//fonts
+//@import "fonts.scss";
+
 // Core variables and mixins
 @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_variables.scss";
 @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss";
@@ -23,17 +30,17 @@
 @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss";
 @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss";
 @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss";
-@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_breadcrumbs.scss";
-@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss";
-@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pager.scss";
-@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss";
-@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_badges.scss";
+//@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_breadcrumbs.scss";
+//@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss";
+//@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pager.scss";
+//@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss";
+//@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_badges.scss";
 // @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_jumbotron.scss";
 // @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_thumbnails.scss";
-@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss";
+//@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss";
 // @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_progress-bars.scss";
 // @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_media.scss";
-@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss";
+//@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss";
 // @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss";
 // @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_wells.scss";
 @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_close.scss";
@@ -49,13 +56,13 @@
 @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_responsive-utilities.scss";
 
 // Fonts - #### have to copy fonts to public folder
-@import '../vendor/font-awesome/scss/font-awesome';
+//@import '../vendor/font-awesome/scss/font-awesome';
 
 // Animate CSS
-@import 'vendor/animate.scss';
+//@import 'vendor/animate.scss';
 
 // Magnificent pop up
-@import '../vendor/magnific-popup/src/css/main';
+//@import '../vendor/magnific-popup/src/css/main';
 
 // Video JS - #### have to rename file to sass - and copy font to public folder
 // @import 'vendor/video-js';
@@ -68,8 +75,6 @@
 
 
 // Themestyle
-@import "variables";
-@import "mixins";
 
 @import "layout";
 

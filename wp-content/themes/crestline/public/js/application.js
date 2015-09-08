@@ -141,3 +141,22 @@ var ismobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
 
 
 })(jQuery);
+
+$(document).ready(function() {
+//  $('[data-toggle=offcanvas]').click(function() {
+//    $('.row-offcanvas').toggleClass('active');
+//    $('.showhide').toggle();
+//  });
+    $('.close-btn-mobile').on('click', function(){
+        $('.navbar-toggle').click() //bootstrap 3.x by Richard
+        
+         setTimeout(function(){
+             $('.navbar-fixed-top').css('position','fixed');
+          },250);
+    });
+    
+    $('.navbar-toggle').on('click',function(){
+       $('.navbar-fixed-top').css('position','static');
+    })
+    
+});
