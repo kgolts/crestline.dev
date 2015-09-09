@@ -100,9 +100,13 @@ h5,
 
 
 #primary.content-area {
- //margin-top: 70px;
+    margin-top: 78px;
+      @include respond-to($screen-sm) {
+    	margin-top: 155px;
+      }
+    
 }
 
 div.page {
-margin-top: 70px;
+//margin-top: 70px;
 }

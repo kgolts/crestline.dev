@@ -22,9 +22,13 @@
 <body <?php body_class(); ?>>
 <div id="wrap">
 <div id="topnav">
+<div id="search-form">
+<?php get_search_form(1); ?>
+</div>
 <?php
 // Top Nav
-get_template_part( 'partials/header/dynamic_nav' ); ?>
+get_template_part( 'partials/header/dynamic_nav' );
+ ?>
 </div>
 
     

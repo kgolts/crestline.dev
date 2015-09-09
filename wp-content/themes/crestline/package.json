@@ -17,5 +17,8 @@
     "gulp-uglifycss": "^1.0.4",
     "gulp-util": "^3.0",
     "run-sequence": "~1.0.2"
+  },
+  "devDependencies": {
+    "gulp-plumber": "^1.0.1"
   }
 }

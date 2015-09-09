@@ -46,13 +46,13 @@ get_template_part( 'inc/load-scripts' );
 // HIDES ADMIN BAR FOR DEV PURPOSES - this can also be done via Dashboard in WP Engine options
  add_filter( 'show_admin_bar', '__return_false' );
 
-add_filter('wp_nav_menu_items','search_box_function', 10, 2);
-function search_box_function( $nav, $args ) {
-    if( $args->theme_location == 'crestline' )
-        return $nav."<li class='menu-header-search'>".get_search_form(false)."</li>";
-
-    return $nav;
-}
+//add_filter('wp_nav_menu_items','search_box_function', 10, 2);
+//function search_box_function( $nav, $args ) {
+//    if( $args->theme_location == 'crestline' )
+//        return $nav."<li class='menu-header-search'>".get_search_form(false)."</li>";
+//
+//    return $nav;
+//}
 
 // Register Custom Navigation Walker - creates bootstrap nav
 get_template_part('inc/wp_bootstrap_navwalker');

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <div id="primary" class="content-area page">
-	<div class="container">
+		<div class="container container-fluid with-gutter">
 		<div class="row">
-			<main id="main" class="site-main" role="main">
+			
 				<div class="col-sm-8">
 
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -11,7 +11,7 @@
 					<?php endwhile; // end of the loop. ?>
 
 				</div><!-- /col -->
-			</main>
+		
 
 			<?php get_sidebar(); ?>
 

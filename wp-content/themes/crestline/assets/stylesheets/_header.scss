@@ -12,20 +12,183 @@
 .navbar-default {
     background-color: #fff;
     
+    .close-btn-mobile {
+          background: url("../images/icon-menu-close.png") no-repeat;
+    @include image-2x("../images/icon-menu-close@2x.png", 48px, 48px);
+        position: absolute;
+        right:16px;
+        text-indent: 200%;
+        white-space: nowrap;
+       top:16px; 
+      
+        display: block;
+    }
+
     .navbar-nav>li>a {
-        font-size: 22px;
+        font-size: 38px;
          color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 20px;
         
         @include respond-to($screen-sm) {
             color:$black-txt;
             font-size: 18px;
+               margin-bottom: 0px;
         }
     }
     
     .with-gutter {
         padding-right: 15px;
     }
+    
+    .caret {
+         background: url("../images/nav-caret.png") no-repeat;
+    @include image-2x("../images/nav-caret@2x.png", 7px, 11px);
+        display: inline-block;
+        border: 0px;
+         width:10px;
+           
+    }
+    
+    .current-menu-parent .caret, .navbar-nav>li>a:hover .caret, .navbar-nav>li>a:focus  .caret,  .navbar-nav>.active>a .caret,  .navbar-nav>.active>a:hover .caret,  .navbar-nav>.active>a:focus .caret  {
+         background: url("../images/nav-caret-green.png") no-repeat;
+    @include image-2x("../images/nav-caret-green@2x.png", 7px, 11px);
+        display: inline-block;
+        border: 0px;
+         width:10px;
+           @include transition($transition200);
+    }
+    
+    
+      .navbar-nav>li>a:hover .caret,  .navbar-nav>.active>a:hover .caret {
+            @include respond-to($screen-sm) {
+         background: url("../images/nav-caret-over.png") no-repeat !important;
+        @include image-2x("../images/nav-caret-over@2x.png", 10px, 6px);
+          display: inline-block;
+         border: 0px;
+        margin-top: 2px;
+            }
+     
+    }
+    
+    .open .caret {
+           background: url("../images/nav-caret-over.png") no-repeat !important;
+        @include image-2x("../images/nav-caret-over@2x.png", 10px, 6px);
+          display: inline-block;
+         border: 0px;
+        margin-top: 2px;
+       
+    }
+    
+     .navbar-nav>li>a:hover, .navbar-nav>li>a:focus {
+           color: #fff;
+         
+           @include respond-to($screen-sm) {
+                color: $crest-green;
+           }
+    }
+        
+    .navbar-nav>.open>a,  .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus, li.current-menu-parent > a,   .navbar-nav>.active>a,  .navbar-nav>.active>a:hover,  .navbar-nav>.active>a:focus   {
+        
+         background:$crest-green;
+        
+          @include respond-to($screen-sm) {
+                  color: $crest-green;
+                background: #fff;
+           }
+        
+     
+    }
+    
+    
+    
+
+    
+    .dropdown-menu {
+      
+        position: static;
+        background-color:transparent;
+        border:0 none;
+        box-shadow:none;
+        margin-top:0;
+        position:static;
+        width:100%;
+        float: none;
+        
+        @include respond-to($screen-sm) {
+            color: #fff;
+             background: $crest-green;
+            box-shadow: none;
+            border: none;
+            border-radius: 0px;
+            left: auto;
+            right: -13px;
+           display: none;
+            min-width: 160px;
+                position:absolute;
+         }
+        
+        li>a {
+            font-size: 22px;
+            margin-bottom: 20px;
+            
+             @include respond-to($screen-sm) {
+                    font-size: 15px;
+                   margin-bottom: 0px;
+             }
+        }
+        
+         
+        
+        &>li>a:hover,&>li>a:focus {
+            background-color:  $crest-green;
+              color:$black-txt;
+        }
+        
+        
+        
+        &>.active>a, &>.active>a:hover, &>.active>a:focus {
+              background-color: $crest-green;
+              color:$black-txt;
+        }
+        
+        a {
+            color:#fff;
+        }
+        
+        &:before {
+               content: "\A";
+    border-style: solid;
+    border-width: 0 17px 13px 17px;
+    border-color: transparent transparent #03b555 transparent;
+    position: absolute;
+    right: 18px;
+    top: -10px;
+        }
+    }
+    
+     .navbar-push-left.in  .dropdown-menu {
+         display: block;
+         
+          @include respond-to($screen-sm) {
+            display: none;
+          }
+    }
+    
+    .open>.dropdown-menu {
+        display: block !important;
+    }
+    
+   
+    
 }
+
+  body:not(.mobile) .dropdown:hover .dropdown-menu {
+         @include respond-to($screen-sm) {
+            display: block;
+         }
+    }
+
 
 .navbar-push {
     padding-right: 15px;
@@ -50,7 +213,7 @@ a.navbar-brand {
         margin-left: 48px !important;
           margin-top: 20px;
            background: url("../images/logo-desktop.png") no-repeat;
-    @include image-2x("../images/logo-desktop@2x.png",185px, 114px);
+        @include image-2x("../images/logo-desktop@2x.png",185px, 114px);
     }
 }
 
@@ -62,13 +225,98 @@ a.navbar-brand {
 }
 
 .navbar-nav {
+    
+      margin-top: 85px;
+    
      @include respond-to($screen-sm) {
         float: right;
+         margin-top: 100px;
      }
+    
+       @include respond-between($screen-sm,1005px) {
+        float: right;
+         margin-top: 10px;
+     }
+    
     }
 
-.menu-header-search {
-    display: none !important;
+#search-form {
+    display: none;
+    
+    
+    margin-top: 0px;
+    width: 250px;
+    position: absolute;
+    right: 0px;
+    top:0px;
+    z-index: 10000;
+    
+      @include respond-to($screen-sm) {
+           display: block;
+        }
+
+div {
+    padding: 5px 0;
+    width: 230px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    float: left;
+    line-height: 22px;
+    
+    input.s {
+        position: absolute;
+        width: 0px;
+        top:0px;
+        float: Left;
+        margin-left: 210px;
+       @include transition($transition200);
+        height: 60px;
+        line-height: 18px;
+        padding: 0 2px 0 2px;
+        border-radius:0px;
+        box-shadow: none;
+        border: 1px solid  $crest-green;
+       
+    }
+    
+    &:hover input.s,  input.s:focus {
+            width: 200px;
+            margin-left: 0px;
+        }
+    
+}
+
+   
+    .btn {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        right: -10px;
+        top: 0px;
+        border-radius:0px;
+        background-color: $crest-green;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        background-image: url(../images/icon-search.png);
+        background-repeat: no-repeat;
+        cursor:pointer;
+        border: none;
+        background-position: center;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        @include transition($transition200);
+            
+        &:hover, &:focus {
+            box-shadow: none;
+               background-color: $crest-green;
+            -webkit-filter:brightness(1.1);
+            -moz-filter:brightness(1.1);
+            filter: brightness(1.1)
+        }
+    }
 }
 
 
@@ -135,12 +383,12 @@ a.navbar-brand {
         border: 0px;
         margin: 0px;
         padding: 1px 26px;
-        @include transition($transition200);
+      //  @include transition($transition200);
         &:hover, &:focus {
              background-color: $crest-green;
-            -webkit-filter:brightness(1.1);
-            -moz-filter:brightness(1.1);
-            filter: brightness(1.1)
+//            -webkit-filter:brightness(1.1);
+//            -moz-filter:brightness(1.1);
+//            filter: brightness(1.1)
         }
           
           .icon-bar {

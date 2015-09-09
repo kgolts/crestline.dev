@@ -2,7 +2,7 @@
 
  <!-- Static navbar -->
       <nav class="navbar navbar-default  navbar-fixed-top">
-        <div class="container container-fluid with-gutter">
+        <div class="container container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle visible-xs" data-toggle="push" data-target=".nav-container" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -11,7 +11,7 @@
               <span class="icon-bar"></span>
             </button>
             
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="/">Project name</a>
           </div>
             
              <?php

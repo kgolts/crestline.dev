@@ -137,6 +137,9 @@ var ismobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
 		/* do your normal resize stuff here, but it'll be
 		 * more-reasonably controlled, so as to not peg
 		 * the host machine's processor */
+        
+          fixNavDropDowns();
+        
 	}, throttleTimeOut));
 
 
@@ -159,4 +162,15 @@ $(document).ready(function() {
        $('.navbar-fixed-top').css('position','static');
     })
     
+    fixNavDropDowns();
+    
 });
+
+fixNavDropDowns = function(){
+    if ($(window).width() > 769 || $('body').hasClass('mobile')) {
+          $(".dropdown-toggle").attr('data-toggle', 'dropdown');
+        } else {
+          $(".dropdown-toggle").removeAttr('data-toggle dropdown');
+        }
+}
+

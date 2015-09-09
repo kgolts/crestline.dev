@@ -133,12 +133,14 @@
       .pipe(sass({
         precision: 10
       }))
+      .on('error', gutil.log)
+ 
       .pipe(gulp.dest('public/css'))
       .pipe(rename('application.min.css'))
       .pipe(uglifycss())
       .pipe(gulp.dest('public/css'))
       .pipe(livereload())
-      .on('error', gutil.log);
+    
   });
 
   gulp.task('images', function(){
