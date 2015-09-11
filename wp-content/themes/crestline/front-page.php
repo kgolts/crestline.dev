@@ -84,6 +84,7 @@ done right, no matter how big or small.</p>
 equipment to fit our clients needs. With over 150 pieces of 
 rolling stock, we have the equipment needed to get the job 
 done right, no matter how big or small.</p>
+                    <a href="/equipment" class="link">See our equipment</a>
               </div>
           </div>
           <div class="col-sm-4">
@@ -94,6 +95,7 @@ done right, no matter how big or small.</p>
 equipment to fit our clients needs. With over 150 pieces of 
 rolling stock, we have the equipment needed to get the job 
 done right, no matter how big or small.</p>
+                    <a href="/equipment" class="link">See our equipment</a>
               </div>
           </div>
         </div>

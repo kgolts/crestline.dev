@@ -19,7 +19,7 @@ min-height: 100%;
 height: auto !important;
 height: 100%;
 /* Negative indent footer by it's height */
-margin: 0 auto -60px;
+margin: 0 auto -580px;
 }
 
 a {
@@ -91,14 +91,41 @@ h5,
   margin-top: 20px;
     box-shadow: none;
     background: $crest-green;
-    padding: 0 20px;
+    padding: 0 40px 0 20px;
     box-shadow: none;
     border:0px;
     border-radius: 0px;
+    position: relative;
+    
+     &:after {
+         @include transition($transition200);
+        content: "";
+       background: url("../images/arrow-white.png") no-repeat;
+        @include image-2x("../images/arrow-white@2x.png",7px, 11px); 
+        position: absolute;
+      
+          top:17px;
+        right: 18px;
+        display: inline-block;
+    }
+    
+    &:hover {
+        color:#fff;
+         &:after {
+         right: 14px;
+        }
+    
+    }
 
       @include respond-to($screen-sm) {
     	height: 60px;
         line-height: 60px;
+          
+          &:after {
+            top: 24px;
+            right: 18px;
+        }
+          
       }	
 }
 
@@ -120,6 +147,8 @@ div.page {
     margin-left: 45px;
 }
 
+
+
 .center.txt {
     text-align: center;
     margin: 0 auto;
@@ -128,7 +157,7 @@ div.page {
 }
 
 .promo-txt {
-    min-height: 385px;
+    height: 385px;
     display: table;
     text-align: center;
     margin: 0 auto;
@@ -170,29 +199,29 @@ div.page {
      display: table;
     
     &.home-1-img {
-        min-height: 400px;
+        height: 400px;
          @include respond-to($screen-sm) {
-            min-height: 800px;
+            height: 800px;
          }
         
     }
     
      &.home-2-img {
-        min-height: 240px;
+        height: 240px;
          
            @include respond-to($screen-sm) {
-           min-height: 400px;
+           height: 400px;
          }
       
         
     }
     
     &.promo-img {
-          min-height: 350px;
+          height: 350px;
           margin-top: 10px; 
         
          @include respond-to($screen-sm) {
-            min-height: 695px;
+            height: 695px;
          }
         
         h1 {
@@ -204,6 +233,7 @@ div.page {
     .bottom-left {
         position: absolute;
         bottom:20px;
+        max-width: 800px;
     }
 
 }
@@ -247,6 +277,14 @@ div.page {
     @include image-2x("../images/icon-logo@2x.png",100px, 50px);
     margin: 0px auto 20px auto;
 }
+
+.text-logo-green {
+     background: url("../images/icon-logo-green.png") no-repeat;
+    @include image-2x("../images/icon-logo-green@2x.png",159px, 81px);
+    margin: 0px auto 20px auto;
+    margin-left: -27px;
+}
+
 
 .three-col {
     
@@ -297,19 +335,26 @@ a.link {
        background: url("../images/arrow-green.png") no-repeat;
         @include image-2x("../images/arrow-green@2x.png",6px, 10px); 
         position: absolute;
-        top: 8px;
-        right: -15px;
+        top: 6px;
+        right: -13px;
         display: inline-block;
     }
     
-    &:hover {
-        &:after {
-             right: -20px;
-        }
-    }
+  
     
      @include respond-to($screen-sm) {
          @include font-size(18px);
+         
+          &:after {
+                top: 8px;
+                right: -15px;
+          }
+         
+           &:hover {
+                &:after {
+                     right: -20px;
+                }
+            }
         }
     
     
