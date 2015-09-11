@@ -53,6 +53,7 @@ Background size with broswer prefix for cover image
 }
 
 @mixin cover-background-no-img() {
+    
     background-position: center center;
     background-repeat: no-repeat;
    // background-attachment: fixed;

@@ -11316,6 +11316,7 @@ return jQuery;
 (function($) {
     $(function() {
         $('[data-toggle="push"]').each(function() {
+            console.log('push-menu');
             var $this = $(this);
 
             var $target = $($this.data('target') || $this.attr('href') || '#navbar');
@@ -11327,6 +11328,7 @@ return jQuery;
             $canvas.addClass('push-canvas');
 
             $this.on('click', function(e) {
+                console.log('push-menu click');
                 $this.toggleClass('active');
                 if ($this.is('.fa-bars')) {
                     $this.toggleClass('fa-rotate-90');

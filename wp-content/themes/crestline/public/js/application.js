@@ -73,7 +73,14 @@ _throttle = function(func, wait, options) {
 // Mobile device detection
 var ismobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
 
-
+function viewport() {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+}
 
 (function($) {
 
@@ -137,9 +144,10 @@ var ismobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
 		/* do your normal resize stuff here, but it'll be
 		 * more-reasonably controlled, so as to not peg
 		 * the host machine's processor */
-        
-          fixNavDropDowns();
-        
+           fixNavDropDowns();
+     mobileFixes();
+         // fixNavDropDowns();
+         //  mobileFixes(viewport().width);
 	}, throttleTimeOut));
 
 
@@ -155,7 +163,7 @@ $(document).ready(function() {
         
          setTimeout(function(){
              $('.navbar-fixed-top').css('position','fixed');
-          },250);
+          },200);
     });
     
     $('.navbar-toggle').on('click',function(){
@@ -163,14 +171,45 @@ $(document).ready(function() {
     })
     
     fixNavDropDowns();
-    
+     mobileFixes();
 });
 
+
 fixNavDropDowns = function(){
-    if ($(window).width() > 769 || $('body').hasClass('mobile')) {
+    if (!isMobile() || $('body').hasClass('mobile')) {
           $(".dropdown-toggle").attr('data-toggle', 'dropdown');
         } else {
           $(".dropdown-toggle").removeAttr('data-toggle dropdown');
         }
 }
+
+
+
+mobileFixes = function(thiswidth){
+    if (isMobile()){
+    $('li.project-updates').insertAfter( $('li.first-nav-item'));
+     $(".order-content-b").insertBefore($(".order-content-a"));
+
+    } else{
+        $( "#menu-nested-pages" ).append( $( "li.project-updates" ) );
+         $(".order-content-a").insertBefore($(".order-content-b"));
+
+        }
+}
+
+
+//Function to the css rule
+function isMobile(){
+    if ($(".visible-xs").css("display") == "none" ){
+        // your code here
+         return false;
+    }else{
+        return true;
+    }
+}
+
+
+
+
+
 

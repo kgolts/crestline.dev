@@ -16,8 +16,36 @@
 
 .container {
     width: 100%;
-//    padding-left: 0px;
-//    padding-right: 0px;
+    &.nomargin {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        
+        .row {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+            [class*="col-"] {
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+            
+        }
+    }
+}
+
+
+.container .marquee-margin > .row {
+      @include respond-to($screen-sm) {
+           margin-left: 10px !important;
+          }
+}
+
+.container.home-marquee {
+     .row.margin-fix {
+       //margin-left: 0px !important;
+          @include respond-to($screen-sm) {
+            margin-right: 10px !important;
+          }
+     }
 }
 
 .with-gutter {
@@ -53,6 +81,9 @@
       padding-right: 0 !important;
     }
 }
+
+
+
 .wow {visibility: hidden;}
 
 /* MOBILE DEVICE SPECIFIC

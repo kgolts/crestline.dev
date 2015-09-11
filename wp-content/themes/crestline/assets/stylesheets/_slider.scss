@@ -3,8 +3,42 @@
 	border : none;
 	overflow: hidden;
 	margin: 0px;
+    padding-bottom: 20px;
 
 	.flex-control-nav {
 		bottom: 0;
 	}
+    
+    &.image-actual-size {
+       .slides li img {
+            width: auto;
+           margin: 0 auto;
+        }
+    }
+    
+    .flex-control-paging {
+        position: relative;
+        li { height: 30px; }
+        
+        li a {
+         background: $crest-green;
+        box-shadow: none;
+            position: relative;
+            background:  $crest-green;
+         border: 4px solid  #fff;
+        border-radius: 26px;
+        height:26px;
+        width:26px;
+        
+        &.flex-active {
+            
+        background: #fff;
+         border: 4px solid  $crest-green;
+        border-radius: 26px;
+        height:26px;
+        width:26px;
+        
+        }
+    }
+    }
 }

@@ -20,15 +20,22 @@
         text-indent: 200%;
         white-space: nowrap;
        top:16px; 
-      
         display: block;
     }
 
+    .navbar-nav>.active>a,  .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus {
+     color: #fff;
+         
+           @include respond-to($screen-sm) {
+                color: $crest-green;
+           }
+    }
+    
     .navbar-nav>li>a {
         font-size: 38px;
          color: #fff;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         
         @include respond-to($screen-sm) {
             color:$black-txt;
@@ -42,17 +49,32 @@
     }
     
     .caret {
-         background: url("../images/nav-caret.png") no-repeat;
-    @include image-2x("../images/nav-caret@2x.png", 7px, 11px);
+        background: url("../images/nav-caret.png") no-repeat;
+        @include image-2x("../images/nav-caret@2x.png", 7px, 11px);
+        
+        @media screen and (max-width: 768px) {
+              background: url("../images/icon-arrow-white.png") no-repeat;
+        @include image-2x("../images/icon-arrow-white@2x.png", 8px, 5px);
+             display: inline-block;
+        }
+          
         display: inline-block;
         border: 0px;
-         width:10px;
-           
+         width:10px;        
     }
+    
+    
     
     .current-menu-parent .caret, .navbar-nav>li>a:hover .caret, .navbar-nav>li>a:focus  .caret,  .navbar-nav>.active>a .caret,  .navbar-nav>.active>a:hover .caret,  .navbar-nav>.active>a:focus .caret  {
          background: url("../images/nav-caret-green.png") no-repeat;
     @include image-2x("../images/nav-caret-green@2x.png", 7px, 11px);
+        
+        @media screen and (max-width: 768px) {
+              background: url("../images/icon-arrow-white.png") no-repeat;
+        @include image-2x("../images/icon-arrow-white@2x.png", 8px, 5px);
+             display: inline-block;
+        }
+        
         display: inline-block;
         border: 0px;
          width:10px;
@@ -64,6 +86,13 @@
             @include respond-to($screen-sm) {
          background: url("../images/nav-caret-over.png") no-repeat !important;
         @include image-2x("../images/nav-caret-over@2x.png", 10px, 6px);
+                
+        @media screen and (max-width: 768px) {
+              background: url("../images/icon-arrow-white.png") no-repeat;
+        @include image-2x("../images/icon-arrow-white@2x.png", 8px, 5px);
+             display: inline-block;
+        }        
+                
           display: inline-block;
          border: 0px;
         margin-top: 2px;
@@ -74,6 +103,13 @@
     .open .caret {
            background: url("../images/nav-caret-over.png") no-repeat !important;
         @include image-2x("../images/nav-caret-over@2x.png", 10px, 6px);
+        
+        @media screen and (max-width: 768px) {
+              background: url("../images/icon-arrow-white.png") no-repeat;
+        @include image-2x("../images/icon-arrow-white@2x.png", 8px, 5px);
+             display: inline-block;
+        }
+        
           display: inline-block;
          border: 0px;
         margin-top: 2px;
@@ -128,9 +164,12 @@
                 position:absolute;
          }
         
+        
+       
+        
         li>a {
             font-size: 22px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             
              @include respond-to($screen-sm) {
                     font-size: 15px;
@@ -142,14 +181,20 @@
         
         &>li>a:hover,&>li>a:focus {
             background-color:  $crest-green;
+              color:#fff;
+             @include respond-to($screen-sm) {
               color:$black-txt;
+             }
         }
         
         
         
         &>.active>a, &>.active>a:hover, &>.active>a:focus {
               background-color: $crest-green;
+              color:#fff;
+              @include respond-to($screen-sm) {
               color:$black-txt;
+             }
         }
         
         a {
@@ -218,6 +263,7 @@ a.navbar-brand {
 }
 
  .navbar-fixed-top {
+     border:0px;
       @include respond-to($screen-sm) {
        position: fixed !important;
     }
@@ -238,6 +284,30 @@ a.navbar-brand {
          margin-top: 10px;
      }
     
+     li.project-updates {
+            background: #fff;
+         a {
+            color: $red-txt;
+           
+            &:hover {color: $red-txt;}
+         }
+         @include respond-to($screen-sm) {
+                
+             a {color: $black-txt;
+                  background: url("../images/icon-nav-cone.png") no-repeat;
+            @include image-2x("../images/icon-nav-cone@2x.png",30px, 30px);
+             width: auto;
+             height: auto;
+             background-position-y: 10px;
+                 background-position: left center;
+            height: auto;
+            text-indent: 20px;
+            margin-left: 10px;
+                 &:hover {color: $crest-green;}
+             }
+             }
+        }
+    
     }
 
 #search-form {
@@ -246,7 +316,7 @@ a.navbar-brand {
     
     margin-top: 0px;
     width: 250px;
-    position: absolute;
+    position: fixed;
     right: 0px;
     top:0px;
     z-index: 10000;
@@ -322,10 +392,10 @@ div {
 
 @media screen and (max-width: 768px) {
     .push-canvas {
-        -webkit-transition: all .25s ease-out;
-        -moz-transition: all .25s ease-out;
-        -o-transition: all .25s ease-out;
-        transition: all .25s ease-out;
+        -webkit-transition: all .20s ease-out;
+        -moz-transition: all .20s ease-out;
+        -o-transition: all .20s ease-out;
+        transition: all .20s ease-out;
 
         overflow-x: hidden;
         position: relative;
@@ -341,10 +411,10 @@ div {
     }
     
     .navbar-push {
-        -webkit-transition: all .25s ease-out;
-        -moz-transition: all .25s ease-out;
-        -o-transition: all .25s ease-out;
-        transition: all .25s ease-out;
+        -webkit-transition: all .20s ease-out;
+        -moz-transition: all .20s ease-out;
+        -o-transition: all .20s ease-out;
+        transition: all .20s ease-out;
 
         height: 100%;
         position: fixed;

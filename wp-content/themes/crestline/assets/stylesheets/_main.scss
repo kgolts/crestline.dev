@@ -1,6 +1,6 @@
 body {
-  color: $white;
-    background-color: #ececec;
+  color: $black-txt;
+    background-color: #fff;
  
 }
 
@@ -59,7 +59,7 @@ h1,
 .h1 {
 	font-size: $h1;
 	  @include respond-to($screen-sm) {
-    	font-size: 2em;
+    	 @include font-size(100px);
       }
 }
 
@@ -109,4 +109,93 @@ h5,
 
 div.page {
 //margin-top: 70px;
+}
+
+
+.txt {
+    margin-left: 45px;
+}
+
+.center.txt {
+    text-align: center;
+    margin: 0 auto;
+   
+     display: table-cell;
+  vertical-align: middle;
+}
+
+
+
+.bg-img {
+    @include cover-background-no-img();
+    width: 100%;
+    position: relative;
+    color:#fff;
+     display: table;
+    
+    &.home-1-img {
+        min-height: 800px;
+    }
+    
+     &.home-2-img {
+        min-height: 400px;
+      
+        
+    }
+    
+    &.promo-img {
+          min-height: 695px;
+          margin-top: 10px;   
+    }
+    
+    .bottom-left {
+        position: absolute;
+        bottom:20px;
+    }
+
+}
+
+.project-updates-slider {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+       @include respond-to($screen-sm) {
+    max-width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+       }
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    
+    .flex-direction-nav {
+        display: none;
+    }
+    
+    .flex-viewport {
+        max-height: 300px;
+    }
+    
+}
+
+.checkMobile {float:left;}
+@media only screen and (max-width: 768px){
+	.sampleClass {float:none;}
+}
+
+.cone {
+     background: url("../images/cone.png") no-repeat;
+    @include image-2x("../images/cone@2x.png",46px, 46px);
+    margin: 40px auto 0px auto;
+}
+
+a.button {
+    height: 60px;
+    background: $crest-green;
+    padding: 0 20px;
+    box-shadow: none;
+    border:0px;
+    border-radius: 0px;
+    
+    
 }
