@@ -23,7 +23,7 @@ margin: 0 auto -60px;
 }
 
 a {
-    color: $blue;
+    color: $crest-green;
 
     @include transition($transition200);
 
@@ -57,7 +57,7 @@ h1,h2,h3,h4,h5,h6 {
 
 h1,
 .h1 {
-	font-size: $h1;
+	 @include font-size(50px);
 	  @include respond-to($screen-sm) {
     	 @include font-size(100px);
       }
@@ -84,18 +84,22 @@ h5,
 .btn {
   display: inline-block;
   text-transform: uppercase;
-  color: $beige;
-  font-size: 1.3em;
-  padding: 0px 30px;
-  height: 50px;
-  line-height: 50px;
+  color: #fff;
+  @include font-size(18px);
+  height: 45px;
+  line-height: 45px;
   margin-top: 20px;
+    box-shadow: none;
+    background: $crest-green;
+    padding: 0 20px;
+    box-shadow: none;
+    border:0px;
+    border-radius: 0px;
 
-	@include border-radius('0px');
-
-	  &.orange {
-	    background-color: $orange;
-	  }
+      @include respond-to($screen-sm) {
+    	height: 60px;
+        line-height: 60px;
+      }	
 }
 
 
@@ -119,11 +123,43 @@ div.page {
 .center.txt {
     text-align: center;
     margin: 0 auto;
-   
      display: table-cell;
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
+.promo-txt {
+    min-height: 385px;
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    
+    padding: 40px 20px 40px 20px;
+    
+    
+     @include respond-to($screen-sm) {
+    	 padding: 60px 20px 60px 20px;
+      }
+    
+     h2 {
+        max-width: 650px;
+          margin: 0 auto;
+         text-align: center;
+         margin-bottom: 20px;
+        
+    }
+    
+    p {
+         max-width: 1200px;
+         margin: 0 auto;
+        text-align: center;
+       @include font-size(13px);
+        color:$gray-txt;
+        
+         @include respond-to($screen-sm) {
+            @include font-size(22px);
+          }
+    }
+}
 
 
 .bg-img {
@@ -134,18 +170,35 @@ div.page {
      display: table;
     
     &.home-1-img {
-        min-height: 800px;
+        min-height: 400px;
+         @include respond-to($screen-sm) {
+            min-height: 800px;
+         }
+        
     }
     
      &.home-2-img {
-        min-height: 400px;
+        min-height: 240px;
+         
+           @include respond-to($screen-sm) {
+           min-height: 400px;
+         }
       
         
     }
     
     &.promo-img {
-          min-height: 695px;
-          margin-top: 10px;   
+          min-height: 350px;
+          margin-top: 10px; 
+        
+         @include respond-to($screen-sm) {
+            min-height: 695px;
+         }
+        
+        h1 {
+            max-width: 640px;
+            margin: 0 auto;
+        }
     }
     
     .bottom-left {
@@ -189,13 +242,75 @@ div.page {
     margin: 40px auto 0px auto;
 }
 
-a.button {
-    height: 60px;
-    background: $crest-green;
-    padding: 0 20px;
-    box-shadow: none;
-    border:0px;
-    border-radius: 0px;
+.text-logo {
+     background: url("../images/icon-logo.png") no-repeat;
+    @include image-2x("../images/icon-logo@2x.png",100px, 50px);
+    margin: 0px auto 20px auto;
+}
+
+.three-col {
+    
+    .txt {
+        text-align: center;
+         margin: 15px auto;
+      @include respond-to($screen-sm) {
+        margin: 35px 0px 60px 40px;
+          text-align: left;
+      }
+    }
+    
+    h3 {
+        @include font-size(25px);
+        max-width: 460px;
+        margin: 0 auto;
+        @include respond-to($screen-sm) {
+            @include font-size(50px);
+            margin: 0 0 15px 0;
+            max-width: 360px;
+        }
+        
+    }
+    
+    p {
+        @include font-size(15px);
+        color:$gray-txt;
+        max-width: 460px;
+        
+         margin: 0 auto;
+         @include respond-to($screen-sm) {
+            margin: 0;
+              max-width: 360px;
+        }
+    }
+}
+
+a.link {
+     @include font-size(15px);
+    color:$crest-green;
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 20px;
+    display: inline-block;
+    &:after {
+         @include transition($transition200);
+        content: "";
+       background: url("../images/arrow-green.png") no-repeat;
+        @include image-2x("../images/arrow-green@2x.png",6px, 10px); 
+        position: absolute;
+        top: 8px;
+        right: -15px;
+        display: inline-block;
+    }
+    
+    &:hover {
+        &:after {
+             right: -20px;
+        }
+    }
+    
+     @include respond-to($screen-sm) {
+         @include font-size(18px);
+        }
     
     
 }

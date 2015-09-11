@@ -142,7 +142,7 @@
     
     .dropdown-menu {
       
-        position: static;
+
         background-color:transparent;
         border:0 none;
         box-shadow:none;
@@ -253,12 +253,15 @@ a.navbar-brand {
   overflow: hidden;
     margin-left: 14px;
     margin-top: 11px;
+    position: relative;
+    left:14px;
     
      @include respond-to($screen-sm) {
         margin-left: 48px !important;
           margin-top: 20px;
            background: url("../images/logo-desktop.png") no-repeat;
         @include image-2x("../images/logo-desktop@2x.png",185px, 114px);
+         left:0px;
     }
 }
 
@@ -453,6 +456,10 @@ div {
         border: 0px;
         margin: 0px;
         padding: 1px 26px;
+        position: absolute;
+        right: 0px;
+
+
       //  @include transition($transition200);
         &:hover, &:focus {
              background-color: $crest-green;

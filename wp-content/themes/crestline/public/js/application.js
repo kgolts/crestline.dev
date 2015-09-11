@@ -162,12 +162,12 @@ $(document).ready(function() {
         $('.navbar-toggle').click() //bootstrap 3.x by Richard
         
          setTimeout(function(){
-             $('.navbar-fixed-top').css('position','fixed');
+            // $('.navbar-fixed-top').css('position','fixed');
           },200);
     });
     
     $('.navbar-toggle').on('click',function(){
-       $('.navbar-fixed-top').css('position','static');
+      // $('.navbar-fixed-top').css('position','static');
     })
     
     fixNavDropDowns();

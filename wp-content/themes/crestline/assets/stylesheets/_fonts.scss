@@ -1,0 +1,21 @@
+:root {
+    font-size: 16px;
+}
+
+
+p.subhead, p {
+    @include font-size(13px);  
+    margin-top: 10px;
+     @include respond-to($screen-sm) {
+    	@include font-size(22px);  
+      }
+}
+
+$font-family-sans-serif:  ProximaNova-Regular, sans-serif !default;
+$font-size-base:          13px !default;
+
+//$font-family-sans-serif: TrueNorthBlack-Regular !default;
+
+
+
+  

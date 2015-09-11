@@ -8,13 +8,13 @@
 
 <div id="primary" class="content-area">
     
-    <div class="container container-fluid nomargin home-marquee">
+    <div class="container-fluid home-marquee">
 		<div class="row">
                 <div class="col-lg-8 col-sm-7">
                     <div class="bg-img home-1-img" style="background-image: url('/wp-content/themes/crestline/public/images/home-section-1-1.jpg')">
                         <div class="bottom-left txt">
                             <h1>We go wherever the dirt is.</h1>
-                            <a href="/capabilities" class="button btn">See our capabilities</a>
+                            <a href="/capabilities" class="btn">See our capabilities</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
         </div>
     
     
-        <div class="container container-fluid nomargin">
+        <div class="container-fluid">
              <div class="bg-img promo-img" style="background-image: url('/wp-content/themes/crestline/public/images/home-section-2-1.jpg')">
                 <div class="center txt">
                  <h1>get the job done right.</h1>
@@ -51,20 +51,67 @@
             </div>
         </div>
     
-    
-        <div class="container container-fluid">
+      <div class="container-fluid">
             <div class="promo-txt">
                 <div class="center txt">
                     <div class="text-logo"></div>
                     <h2>over 20 years of experience and hundreds of projects.</h2>
-                    <p class="gray-txt">Crestline is a general contractor specializing in complete site preparation, utilities, mass 
+                    <p>Crestline is a general contractor specializing in complete site preparation, utilities, mass 
     excavation, highway and road construction. Established in 1994 and based in The Dalles, Oregon, our resume includes both public and private works projects throughout the Northwest. With a workforce of over 70 employees, we have the personnel and equipment to successfully complete projects of varying scope and size.
     </p>
                 </div>
             </div>
         </div>
     
-    <div class="container container-fluid">
+    <div class="container-fluid three-col">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="/wp-content/themes/crestline/public/images/home-section-3-1.jpg" class="img-responsive center-block">
+              <div class="txt">
+                <h3>fully equipped.</h3>
+                <p>Crestline owns and maintains a large fleet of late model 
+equipment to fit our clients needs. With over 150 pieces of 
+rolling stock, we have the equipment needed to get the job 
+done right, no matter how big or small.</p>
+                  <a href="/equipment" class="link">See our equipment</a>
+              </div>
+          </div>
+          <div class="col-sm-4">
+            <img src="/wp-content/themes/crestline/public/images/home-section-3-2.jpg" class="img-responsive center-block">  
+               <div class="txt">
+                <h3>fully equipped.</h3>
+                <p>Crestline owns and maintains a large fleet of late model 
+equipment to fit our clients needs. With over 150 pieces of 
+rolling stock, we have the equipment needed to get the job 
+done right, no matter how big or small.</p>
+              </div>
+          </div>
+          <div class="col-sm-4">
+             <img src="/wp-content/themes/crestline/public/images/home-section-3-3.jpg" class="img-responsive center-block">    
+               <div class="txt">
+                <h3>fully equipped.</h3>
+                <p>Crestline owns and maintains a large fleet of late model 
+equipment to fit our clients needs. With over 150 pieces of 
+rolling stock, we have the equipment needed to get the job 
+done right, no matter how big or small.</p>
+              </div>
+          </div>
+        </div>
+    </div>
+    
+    
+    <div class="container-fluid">
+             <div class="bg-img promo-img" style="background-image: url('/wp-content/themes/crestline/public/images/home-promo-4.jpg')">
+                <div class="center txt">
+                 <h1>Dedicated</h1>
+                 </div>
+            </div>
+        </div>
+    
+    
+      
+    
+    <div class="container-fluid">
 		<div class="row">
 				<div class="col-sm-8">
 
