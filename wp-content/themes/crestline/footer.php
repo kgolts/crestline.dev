@@ -31,8 +31,8 @@
 				</div>
                 <div class="col-sm-4">
                     <div class="pull-right">
-					<a href="#partner-site" class="btn">Partner Login</a>
-                        </div>
+					   <a href="#partner-site" class="btn">Partner Login</a>
+                    </div>
 				</div>
 			</div>
 		</div>
