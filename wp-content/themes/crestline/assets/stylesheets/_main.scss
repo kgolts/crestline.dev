@@ -359,3 +359,22 @@ a.link {
     
     
 }
+
+
+.top-txt {
+    max-width: 730px;
+    
+    h4 {
+        color:$crest-green;
+        @include font-size(22px);
+    }
+    
+    h1 {
+      @include font-size(88px);
+    }
+    
+    p {
+         @include font-size(15px);
+        color: $gray-txt;
+    }
+}

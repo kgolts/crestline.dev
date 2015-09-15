@@ -35,6 +35,19 @@
                     </div>
 				</div>
 			</div>
+            
+            <div class="row top-border">
+                <div class="site-info col-sm-8">
+                    <div class="txt">
+                <ul class="share-icons">
+                    <li class="dalles-chamber"><a title="dalles-chamber" target="_blank" href="#">dalles-chamber</a></li>
+                    <li class="dalles-port"><a title="dalles-port" target="_blank" href="#">dalles-port</a></li>
+                  </ul>
+                <p class="copyright"><i>© Crestline Construction Company, LLC.  /  OR Contractor #101573  /  WA Contractor CRESTCCO66OK  /  All rights reserved.</i></p>
+                    </div>
+                </div>
+            </div>
+            
 		</div>
 	</footer><!-- #colophon -->
 

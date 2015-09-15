@@ -58,7 +58,6 @@ get_template_part( 'inc/load-scripts' );
 get_template_part('inc/wp_bootstrap_navwalker');
 
 
-
 // ACF - Add Multiple Options Pages (you need to have the ACF Options Page Add-On installed
 // get_template_part( 'inc/options-pages' );
 

@@ -3499,7 +3499,7 @@ a.navbar-brand {
           background-image: url("../images/logo-desktop@2x.png"); } } }
 
 .navbar-fixed-top {
-  border: 0px; }
+  border-bottom: solid #d0d0cf 2px; }
   @media only screen and (min-width: 769px) {
     .navbar-fixed-top {
       position: fixed !important; } }
@@ -3658,6 +3658,10 @@ a.navbar-brand {
       width: 26px;
       height: 3px;
       border-radius: 0px; } }
+
+body.page-template-front-page .nabar-fixed-top {
+  border-bottom: 0px !important;
+  border: 0px !important; }
 
 body {
   color: #4f3c32;
@@ -3964,12 +3968,37 @@ a.link {
       a.link:hover:after {
         right: -20px; } }
 
+.top-txt {
+  max-width: 730px; }
+  .top-txt h4 {
+    color: #03b555;
+    font-size: 22px;
+    font-size: 1.375rem; }
+  .top-txt h1 {
+    font-size: 88px;
+    font-size: 5.5rem; }
+  .top-txt p {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    color: #8c847f; }
+
 .site-footer, #push {
   height: 580px; }
 
 .site-footer {
   background-color: #fff;
   margin-top: 30px; }
+  .site-footer .txt p {
+    color: #8c847f;
+    font-size: 15px;
+    font-size: 0.9375rem; }
+  .site-footer .top-border {
+    border-top: 2px solid #e1e1e1;
+    margin-top: 30px; }
+  .site-footer h4 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    color: #03b555; }
   .site-footer .pull-right {
     float: left !important;
     margin-left: 45px;
@@ -3984,6 +4013,8 @@ a.link {
       .site-footer .site-info {
         margin: 0px;
         text-align: left; } }
+  .site-footer .copyright {
+    margin-top: 40px; }
   .site-footer ul {
     margin: 0;
     padding: 0;
@@ -4039,3 +4070,23 @@ a.link {
         .site-footer ul.share-icons li.email a {
           /* on retina, use image that's scaled by 2 */
           background-image: url("../images/icon-email@2x.png"); } }
+    .site-footer ul.share-icons li.dalles-chamber a {
+      background: url("../images/icon-dalles.png") no-repeat;
+      background-size: 122px 96px;
+      display: block;
+      width: 122px;
+      height: 96px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        .site-footer ul.share-icons li.dalles-chamber a {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../images/icon-dalles@2x.png"); } }
+    .site-footer ul.share-icons li.dalles-port a {
+      background: url("../images/icon-port.png") no-repeat;
+      background-size: 271px 49px;
+      display: block;
+      width: 271px;
+      height: 49px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        .site-footer ul.share-icons li.dalles-port a {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../images/icon-port@2x.png"); } }

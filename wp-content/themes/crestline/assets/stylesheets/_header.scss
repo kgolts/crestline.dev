@@ -11,7 +11,7 @@
 
 .navbar-default {
     background-color: #fff;
-    
+   
     .close-btn-mobile {
           background: url("../images/icon-menu-close.png") no-repeat;
     @include image-2x("../images/icon-menu-close@2x.png", 48px, 48px);
@@ -20,6 +20,7 @@
         text-indent: 200%;
         white-space: nowrap;
        top:16px; 
+      
         display: block;
     }
 
@@ -266,12 +267,15 @@ a.navbar-brand {
 }
 
  .navbar-fixed-top {
-     border:0px;
+   
+       border-bottom: solid #d0d0cf 2px;
       @include respond-to($screen-sm) {
        position: fixed !important;
     }
    
 }
+
+
 
 .navbar-nav {
     
@@ -476,5 +480,10 @@ div {
           }
     }
    
+}
+
+body.page-template-front-page .nabar-fixed-top {
+     border-bottom:0px !important;
+     border:0px !important;
 }
 

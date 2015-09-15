@@ -10,7 +10,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            
+<!--            <div class="close-btn-mobile"></div>-->
             <a class="navbar-brand" href="/">Project name</a>
           </div>
             

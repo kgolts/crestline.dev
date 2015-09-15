@@ -2,7 +2,21 @@
         height: 580px;
     }
 .site-footer {
+    
+    .txt p {
+        color: $gray-txt;
+           @include font-size(15px);
+    }
 
+    .top-border {
+        border-top:2px solid #e1e1e1;
+        margin-top: 30px;
+    }
+    
+    h4 {
+        @include font-size(20px);
+        color: $crest-green;
+    }
     
  background-color:#fff;
     margin-top: 30px;
@@ -26,6 +40,11 @@
              margin:0px;
              text-align: left;
          }
+    }
+    
+    .copyright {
+        margin-top: 40px;
+
     }
     
     ul {margin: 0; padding: 0; list-style: none;}
@@ -61,6 +80,16 @@
         &.email a {        
             background: url("../images/icon-email.png") no-repeat;
             @include image-2x("../images/icon-email@2x.png",19px, 19px);
+        }
+        
+         &.dalles-chamber a {        
+            background: url("../images/icon-dalles.png") no-repeat;
+            @include image-2x("../images/icon-dalles@2x.png",122px, 96px);
+        }
+        
+        &.dalles-port a {        
+            background: url("../images/icon-port.png") no-repeat;
+            @include image-2x("../images/icon-port@2x.png",271px, 49px);
         }
     }
 }

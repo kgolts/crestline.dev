@@ -3,14 +3,18 @@
 ?>
 <?php get_header(); ?>
 
-<div id="primary" class="content-area page">
-	<div class="container">
+<div id="primary" class="content-area page projects">
+	<div class="container-fluid">
 		<div class="row">
-			<main id="main" class="site-main" role="main">
-				<div class="col-sm-8">
+			
+				<div class="col-sm-12">
 
 					<?php while ( have_posts() ) : the_post(); ?>
-							<?php get_template_part( 'partials/loops/page-loop' ); ?>
+				    <div class="txt top-txt">
+                    <h4>Our Projects</h4>
+                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                    <?php the_content(); ?>
+                    </div>    
                             
                           <div class="container">
 		                  
@@ -33,9 +37,11 @@
                                   
                                 ?>
                                     
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-4">
+                                         <?php echo get_the_post_thumbnail( $page->ID ); ?> 
+                                        
                                         <h2><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h2>
-                                        <?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?> 
+                                       
                                         <div class="entry"><?php echo $content; ?></div>
                                     </div>
                                 <?php
@@ -52,9 +58,8 @@
 					<?php endwhile; // end of the loop. ?>
 
 				</div><!-- /col -->
-			</main>
+			
 
-			<?php get_sidebar(); ?>
 
 		</div><!-- /row -->
 	</div><!-- /container -->

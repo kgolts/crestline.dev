@@ -3,7 +3,26 @@
 ?>
 <?php get_header(); ?>
 
+<?php
+//custom fields
+$rows = get_field('images' ); // get all the rows
+$first_row = $rows[0]; // get the first row
+$first_row_image = $first_row['image' ]; // get the sub field value 
+$first_row_text = $first_row['image_text' ]; // get the sub field value 
+$first_row_button = $first_row['button' ]; // get the sub field value 
 
+
+$second_row = $rows[1]; // get the first row
+$second_row_image = $second_row['image' ]; // get the sub field value 
+
+$third_row = $rows[2]; // get the first row
+$third_row_image = $third_row['image' ]; // get the sub field value 
+$third_row_text = $third_row['image_text' ]; // get the sub field value 
+
+$fourth_row = $rows[3]; // get the first row
+$fourth_row_image = $fourth_row['image' ]; // get the sub field value 
+$fourth_row_text = $fourth_row['image_text' ]; // get the sub field value 
+?>
 
 
 <div id="primary" class="content-area">
@@ -11,9 +30,9 @@
     <div class="container-fluid home-marquee">
 		<div class="row">
                 <div class="col-lg-8 col-sm-7">
-                    <div class="bg-img home-1-img" style="background-image: url('/wp-content/themes/crestline/public/images/home-section-1-1.jpg')">
+                    <div class="bg-img home-1-img" style="background-image: url('<?php echo $first_row_image ?>')">
                         <div class="bottom-left txt">
-                            <h1>We go wherever the dirt is.</h1>
+                            <h1><?php echo $first_row_text ?></h1>
                             <a href="/capabilities" class="btn">See our capabilities</a>
                         </div>
                     </div>
@@ -24,7 +43,7 @@
                       <div class="order-content-a col-sm-12">
 
 
-                    <div class="bg-img home-2-img" style="background-image: url('/wp-content/themes/crestline/public/images/home-section-1-2.jpg')"></div>
+                    <div class="bg-img home-2-img" style="background-image: url('<?php echo $second_row_image ?>')"></div>
 
                     </div>
 
@@ -42,27 +61,26 @@
                
         </div>
     
-    
+<?php if( $third_row_image): ?>
         <div class="container-fluid">
-             <div class="bg-img promo-img" style="background-image: url('/wp-content/themes/crestline/public/images/home-section-2-1.jpg')">
+             <div class="bg-img promo-img" style="background-image: url('<?php echo $third_row_image ?>')">
                 <div class="center txt">
-                 <h1>get the job done right.</h1>
+                 <h1><?php echo $third_row_text ?></h1>
                  </div>
             </div>
         </div>
+<?php endif; ?>
     
       <div class="container-fluid">
             <div class="promo-txt">
                 <div class="center txt">
                     <div class="text-logo"></div>
-                    <h2>over 20 years of experience and hundreds of projects.</h2>
-                    <p>Crestline is a general contractor specializing in complete site preparation, utilities, mass 
-    excavation, highway and road construction. Established in 1994 and based in The Dalles, Oregon, our resume includes both public and private works projects throughout the Northwest. With a workforce of over 70 employees, we have the personnel and equipment to successfully complete projects of varying scope and size.
-    </p>
+                   <?php the_field('text_block'); ?>
                 </div>
             </div>
         </div>
     
+<!--
     <div class="container-fluid three-col">
         <div class="row">
           <div class="col-sm-4">
@@ -100,52 +118,50 @@ done right, no matter how big or small.</p>
           </div>
         </div>
     </div>
+-->
     
+    <?php if( have_rows('image_blocks') ): ?>
+
+	 <div class="container-fluid three-col">
+        <div class="row">
+
+	<?php while( have_rows('image_blocks') ): the_row(); 
+
+		// vars
+		$image = get_sub_field('image');
+		$content = get_sub_field('content');
+
+		?>
+
+		 <div class="col-sm-4">
+             
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" class="img-responsive center-block" />
+            <div class="txt">
+                <?php echo $content; ?>
+            </div>
+
+		</div>
+
+	<?php endwhile; ?>
+
+	</div>
+    </div>
+
+<?php endif; ?>
     
+    <?php if( $fourth_row_image): ?>
     <div class="container-fluid">
-             <div class="bg-img promo-img" style="background-image: url('/wp-content/themes/crestline/public/images/home-promo-4.jpg')">
+             <div class="bg-img promo-img" style="background-image: url('<?php echo $fourth_row_image ?>')">
                 <div class="center txt">
-                 <h1>Dedicated</h1>
+                 <h1><?php echo $fourth_row_text ?></h1>
                  </div>
             </div>
         </div>
     
     
-      
-    
-    <div class="container-fluid">
-		<div class="row">
-				<div class="col-sm-8">
+     <?php endif; ?> 
+        
 
-					<?php while ( have_posts() ) : the_post(); ?>
-							<?php get_template_part( 'partials/loops/page-loop' ); ?>
-					<?php endwhile; // end of the loop. ?>
-
-					<!-- OUTPUT BLOG POSTS -->
-					<?php
-					$args = array(
-						'posts_per_page' => 8,
-					);
-					query_posts($args);
-					?>
-					<div class="post-loop">
-						<div class="row">
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-								<?php
-								// large News Item
-								get_template_part( 'partials/loops/news-loop' ); ?>
-
-							<?php  endwhile; endif; ?>
-							<?php  wp_reset_query(); ?>
-						</div>
-					</div>
-
-				</div><!-- /col -->
-			
-		
-
-		</div><!-- /row -->
-	</div><!-- /container -->
     
     
    
