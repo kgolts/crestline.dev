@@ -6,7 +6,6 @@
             "key": "field_5549126c1c33c",
             "label": "Slide",
             "name": "slide",
-            "prefix": "",
             "type": "repeater",
             "instructions": "",
             "required": 1,
@@ -25,7 +24,6 @@
                     "key": "field_5549143543b69",
                     "label": "Image",
                     "name": "slide-image",
-                    "prefix": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -50,7 +48,6 @@
                     "key": "field_5549146643b6a",
                     "label": "Content",
                     "name": "slide-content",
-                    "prefix": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -83,7 +80,14 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "templates\/homepage.php"
+                "value": "templates\/project.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/about.php"
             }
         ]
     ],
@@ -93,5 +97,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1430854778
+    "active": 1,
+    "description": "",
+    "modified": 1442357211
 }

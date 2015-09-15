@@ -22,7 +22,7 @@ height: 100%;
 margin: 0 auto -580px;
 }
 
-a {
+a, a > img {
     color: $crest-green;
 
     @include transition($transition200);
@@ -144,7 +144,12 @@ div.page {
 
 
 .txt {
+    margin-right: 10px;
+    margin-left: 10px;
+     @include respond-to($screen-sm) {
     margin-left: 45px;
+           margin-right: 0px;
+     }
 }
 
 
@@ -157,7 +162,7 @@ div.page {
 }
 
 .promo-txt {
-    height: 385px;
+    height: auto;
     display: table;
     text-align: center;
     margin: 0 auto;
@@ -167,6 +172,7 @@ div.page {
     
      @include respond-to($screen-sm) {
     	 padding: 60px 20px 60px 20px;
+          height: 385px;
       }
     
      h2 {
@@ -190,6 +196,51 @@ div.page {
     }
 }
 
+.txt-block {
+    height: auto;
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    
+    padding: 40px 20px 40px 20px;
+    
+    
+     @include respond-to($screen-sm) {
+    	
+          height: 385px;
+      }
+    
+     h2 {
+        max-width: 650px;
+          margin: 0 auto;
+         text-align: center;
+         margin-bottom: 20px;
+        
+    }
+    
+    p {
+         max-width: 1200px;
+         margin: 0 auto;
+        text-align: center;
+       @include font-size(22px);
+        color:$gray-txt;
+        
+         @include respond-to($screen-sm) {
+            @include font-size(33px);
+          }
+    }
+}
+
+  a > .bg-img  {
+           @include transition($transition200);
+     &:hover,
+	&:focus,
+	&:active {
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+	}
+}
+    
 
 .bg-img {
     @include cover-background-no-img();
@@ -214,6 +265,18 @@ div.page {
          }
       
         
+    }
+    
+    &.relatedprojects {
+         height: 250px;
+         
+           @include respond-to($screen-sm) {
+           height: 300px;
+         }
+        
+         @include respond-to($screen-md) {
+           height: 400px;
+         }
     }
     
     &.promo-img {
@@ -286,13 +349,47 @@ div.page {
 }
 
 
+.container-fluid.three-col {
+       // max-width: 1500px;
+    //margin: 0 auto;
+    
+      .row {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+          
+          [class*="col-"] {
+           padding-right: 10px !important;
+              padding-left: 10px !important;
+              padding-top: 30px;
+          }
+          
+           @include respond-to($screen-sm) {
+                [class*="col-"] {
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+                      padding-top: 0px;
+                }
+
+                [class*="col-"]:first-child {
+
+                padding-right: 10px !important;
+                }
+                [class*="col-"]:last-child {
+
+                padding-left: 10px !important;
+                }
+            }
+      }
+}
+
+
 .three-col {
     
     .txt {
         text-align: center;
          margin: 15px auto;
       @include respond-to($screen-sm) {
-        margin: 35px 0px 60px 40px;
+        margin: 35px 20px 60px 40px;
           text-align: left;
       }
     }
@@ -370,11 +467,116 @@ a.link {
     }
     
     h1 {
-      @include font-size(88px);
+          @include respond-to($screen-sm) {
+                @include font-size(88px);
+          }
     }
     
     p {
          @include font-size(15px);
         color: $gray-txt;
+    }
+}
+
+.full-width {
+    p {max-width:none;}
+}
+
+.projects  {
+    h2 a {
+        color: $black-txt;
+         @include font-size(50px);
+    }
+}
+
+a > img {
+     &:hover,
+	&:focus,
+	&:active {
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+	}
+}
+
+.max-lg {
+     max-width: 830px; 
+    margin-bottom: 60px;
+}
+
+.project {
+
+    .flexslider {
+        padding-top: 30px;
+        @include respond-to($screen-sm) {
+        padding-top: 0px;
+        }
+    }
+    
+    h4 {
+        color: $crest-green;
+         @include font-size(22px);
+    }
+    
+    h3 {
+     color: $gray-txt;
+    }
+    
+    .top-txt {
+    max-width: 830px;  
+    }
+    
+    ul li {
+        @include font-size(18px);
+          color: $gray-txt;
+        margin-bottom: 16px;
+        
+        &:last-child {
+          margin-bottom: 0px;
+        }
+    }
+}
+
+.acf-map {
+	width: 100%;
+	height: 500px;
+	border: #ccc solid 0px;
+	margin: 10px 0;
+    
+    @include respond-to($screen-sm) {
+        	height: 700px;
+    }
+}
+
+p.quote-attribute {
+      @include font-size(13px);
+    color: $black-txt;
+    margin-top: 20px;
+    
+      @include respond-to($screen-sm) {
+        	 @include font-size(22px);
+    }
+}
+
+.related-projects {
+   
+        .title {
+            -webkit-font-smoothing: subpixel-antialiased;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top:40%;
+             @include font-size(32px);
+            color:#fff;
+            text-transform: uppercase;
+        }
+    
+}
+
+.row-related {
+    display: none;
+      @include respond-to($screen-sm) {
+        	display: block;
     }
 }

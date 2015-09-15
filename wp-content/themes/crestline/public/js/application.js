@@ -153,6 +153,9 @@ function viewport() {
 
 })(jQuery);
 
+
+
+
 $(document).ready(function() {
 //  $('[data-toggle=offcanvas]').click(function() {
 //    $('.row-offcanvas').toggleClass('active');
@@ -170,13 +173,19 @@ $(document).ready(function() {
       // $('.navbar-fixed-top').css('position','static');
     })
     
+  
+    
+    $('body:not(.mobile) .dropdown .dropdown-menu').hover(function(){
+        $(this).parent().toggleClass('hover');
+    })
+    
     fixNavDropDowns();
      mobileFixes();
 });
 
 
 fixNavDropDowns = function(){
-    if (!isMobile() || $('body').hasClass('mobile')) {
+    if (!isMobile() && $('body').hasClass('mobile')) {
           $(".dropdown-toggle").attr('data-toggle', 'dropdown');
         } else {
           $(".dropdown-toggle").removeAttr('data-toggle dropdown');

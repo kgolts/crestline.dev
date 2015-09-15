@@ -123,21 +123,23 @@ done right, no matter how big or small.</p>
     <?php if( have_rows('image_blocks') ): ?>
 
 	 <div class="container-fluid three-col">
-        <div class="row">
+        <div class="row col-padding">
 
 	<?php while( have_rows('image_blocks') ): the_row(); 
 
 		// vars
 		$image = get_sub_field('image');
 		$content = get_sub_field('content');
-
+        $url = get_sub_field('url');
+         $button_text = get_sub_field('button_text');
 		?>
 
 		 <div class="col-sm-4">
              
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" class="img-responsive center-block" />
+             <a href="<?php echo $url ?>"><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $image['url'] ?>')"></div></a>
             <div class="txt">
                 <?php echo $content; ?>
+                 <a href="<?php echo $url ?>" class="link"><?php echo $button_text ?></a>
             </div>
 
 		</div>

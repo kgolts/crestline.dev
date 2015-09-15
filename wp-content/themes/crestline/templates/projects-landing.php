@@ -4,21 +4,21 @@
 <?php get_header(); ?>
 
 <div id="primary" class="content-area page projects">
-	<div class="container-fluid">
-		<div class="row">
-			
-				<div class="col-sm-12">
-
-					<?php while ( have_posts() ) : the_post(); ?>
-				    <div class="txt top-txt">
-                    <h4>Our Projects</h4>
-                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                    <?php the_content(); ?>
-                    </div>    
-                            
-                          <div class="container">
+	<div class="container-fluid three-col">            
+        <div class="row">
+            <?php while ( have_posts() ) : the_post(); ?>
+            <div class="col-sm-8">
+            <div class="txt full-width">
+                <h4>Our Projects</h4>
+                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                <?php the_content(); ?>
+            </div>    
+            </div>
+        </div>
+    </div>
+                          <div class="container-fluid three-col">
 		                  
-                            <div class="row">
+                              <div class="row col-padding">
                             <?php
                                 $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
                                 //col vars
@@ -33,21 +33,23 @@
                                         // continue;
 
                                     $content = apply_filters( 'the_content', $content );
-                                    
+                                     $url = wp_get_attachment_url( get_post_thumbnail_id($page->ID) );
                                   
                                 ?>
                                     
                                     <div class="col-sm-4">
-                                         <?php echo get_the_post_thumbnail( $page->ID ); ?> 
-                                        
+                                        <a href="<?php echo get_page_link( $page->ID ); ?>"><div class="bg-img relatedprojects" style="background-image: url('<?php echo $url ?>')"></div> </a>
+                                       <div class="txt"> 
                                         <h2><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h2>
                                        
-                                        <div class="entry"><?php echo $content; ?></div>
+                                        <p><?php echo wp_trim_words( $content, 40 )  ?></p>
+                                         <a href="<?php echo get_page_link( $page->ID ); ?>" class="link">View full project</a>
+                                        </div>
                                     </div>
                                 <?php
                                     $counter++;
                   if ($counter % $colnum == 0) {
-                  echo '</div><div class="row">';
+                  echo '</div><div class="row col-padding">';
                 }
             
                                 }	
