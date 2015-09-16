@@ -65,33 +65,33 @@
         </div>
         
         <?php 
-
         $location = get_field('map');
 
         if( !empty($location) ):
         ?>
+        
         <div class="acf-map">
             <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
         </div>
         <?php endif; ?>
         
         <div class="row text-center center-block  col-padding row-related">
-           <?php $posts = get_field('related_projects');
+            <?php $posts = get_field('related_projects');
 
-    if( $posts ): ?>
-   
-    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-         <div class="related-projects col-sm-4">
-        <?php setup_postdata($post); ?>
-        <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-            <a href="<?php the_permalink(); ?>"><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $url ?>')">
-               <div class="title"><?php the_title(); ?></div>
+            if( $posts ): ?>
+
+                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                <div class="related-projects col-sm-4">
+                <?php setup_postdata($post); ?>
+                <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+                <a href="<?php the_permalink(); ?>"><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $url ?>')">
+                <div class="title"><?php the_title(); ?></div>
                 </div></a>
-        </div>
-    <?php endforeach; ?>
-    
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php endif; ?>
+                </div>
+                <?php endforeach; ?>
+
+                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+            <?php endif; ?>
         </div>
         
     </div>

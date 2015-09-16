@@ -66,6 +66,24 @@
      }
 }
 
+.row.col-padding-2 {
+       margin-left: 0px !important;
+       margin-right: 0px !important;
+    [class*="col-"] {
+        margin-top: 10px;
+    }
+     @include respond-to($screen-sm) {
+          margin-bottom: 0px;
+    [class*="col-"]:first-child {
+              padding-right: 10px !important;
+            }
+          [class*="col-"]:last-child {
+              padding-left: 0px !important;
+            }
+     }
+}
+
+
 
 .container-fluid .marquee-margin > .row {
       @include respond-to($screen-sm) {

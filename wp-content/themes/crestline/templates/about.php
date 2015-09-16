@@ -5,39 +5,43 @@
 
 <?php
 //custom fields
-$rows = get_field('images' ); // get all the rows
+$rows = get_field('top_images'); // get all the rows
+
 $first_row = $rows[0]; // get the first row
 $first_row_image = $first_row['image' ]; // get the sub field value 
-$first_row_text = $first_row['image_text' ]; // get the sub field value 
-$first_row_button = $first_row['button' ]; // get the sub field value 
-
 
 $second_row = $rows[1]; // get the first row
 $second_row_image = $second_row['image' ]; // get the sub field value 
 
 $third_row = $rows[2]; // get the first row
 $third_row_image = $third_row['image' ]; // get the sub field value 
-$third_row_text = $third_row['image_text' ]; // get the sub field value 
 
-$fourth_row = $rows[3]; // get the first row
-$fourth_row_image = $fourth_row['image' ]; // get the sub field value 
-$fourth_row_text = $fourth_row['image_text' ]; // get the sub field value 
+
+$promo_rows = get_field('promos');
+$first_promo_row = $promo_rows[0];
+$first_promo_image =  $first_promo_row['image' ]; 
+$first_promo_title =  $first_promo_row['title' ]; 
+$first_promo_button_link =  $first_promo_row['button_link' ]; 
+$first_promo_button_text =  $first_promo_row['button_text' ]; 
+
+$second_promo_row = $promo_rows[1];
+$second_promo_image =  $second_promo_row['image' ]; 
+$second_promo_title =  $second_promo_row['title' ]; 
+$second_promo_button_link =  $second_promo_row['button_link' ]; 
+$second_promo_button_text =  $second_promo_row['button_text' ]; 
+
 ?>
 
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area about">
     
     <div class="container-fluid home-marquee">
 		<div class="row">
                 <div class="col-lg-8 col-sm-7">
-                    <div class="bg-img home-1-img" style="background-image: url('<?php echo $first_row_image ?>')">
-                        <div class="bottom-left txt">
-                            <h1><?php echo $first_row_text ?></h1>
-                            <a href="/capabilities" class="btn">See our capabilities</a>
-                        </div>
+                    <div class="bg-img about-1-img" style="background-image: url('<?php echo $first_row_image ?>')">
                     </div>
                 </div>
-                <div class="col-lg-4  col-sm-5 marquee-margin">
+                <div class="col-lg-4  col-sm-5 marquee-margin hidden-xs">
 
                      <div class="row">
                       <div class="order-content-a col-sm-12">
@@ -48,12 +52,8 @@ $fourth_row_text = $fourth_row['image_text' ]; // get the sub field value
                     </div>
 
                      <div class="order-content-b col-sm-12"> 
-                       <div class="project-updates-slider">
-<!--                           <div class="cone"></div>-->
-                        <?php
-                    // Hero Slider
-                    get_template_part( 'partials/global/slider' ); ?>
-                         </div>
+                         <div class="bg-img about-3-img" style="background-image: url('<?php echo $third_row_image ?>')"></div>
+
                     </div>
                     </div>
                 </div>
@@ -61,107 +61,83 @@ $fourth_row_text = $fourth_row['image_text' ]; // get the sub field value
                
         </div>
     
-<?php if( $third_row_image): ?>
-        <div class="container-fluid">
-             <div class="bg-img promo-img" style="background-image: url('<?php echo $third_row_image ?>')">
-                <div class="center txt">
-                 <h1><?php echo $third_row_text ?></h1>
-                 </div>
+    <div class="container-fluid">
+        <div class="row">
+       
+            <div class="txt  col-sm-8">
+               <h4><?php
+    echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
+    ?></h4>
+                <?php the_content(); ?>
             </div>
         </div>
-<?php endif; ?>
-    
-      <div class="container-fluid">
-            <div class="promo-txt">
-                <div class="center txt">
-                    <div class="text-logo"></div>
-                   <?php the_field('text_block'); ?>
+        
+        
+        <div class="row capabilities">
+             <div class="txt  col-sm-12">
+                <h3>Capabilities</h3>
+                <?php the_field ('capabilities' ); ?>
+            </div>
+        </div>
+        
+        
+    <?php if( $first_promo_image): ?>
+        <div class="container-fluid">
+                 <div class="bg-img promo-img" style="background-image: url('<?php echo $first_promo_image ?>')">
+                    <div class="center txt">
+                     <h1><?php echo $first_promo_title ?></h1>
+                     <a href="<?php echo $first_promo_button_link ?>" class="btn"><?php echo $first_promo_button_text ?></a>
+                     </div>
                 </div>
             </div>
-        </div>
-    
-<!--
-    <div class="container-fluid three-col">
-        <div class="row">
-          <div class="col-sm-4">
-            <img src="/wp-content/themes/crestline/public/images/home-section-3-1.jpg" class="img-responsive center-block">
-              <div class="txt">
-                <h3>fully equipped.</h3>
-                <p>Crestline owns and maintains a large fleet of late model 
-equipment to fit our clients needs. With over 150 pieces of 
-rolling stock, we have the equipment needed to get the job 
-done right, no matter how big or small.</p>
-                  <a href="/equipment" class="link">See our equipment</a>
-              </div>
-          </div>
-          <div class="col-sm-4">
-            <img src="/wp-content/themes/crestline/public/images/home-section-3-2.jpg" class="img-responsive center-block">  
-               <div class="txt">
-                <h3>fully equipped.</h3>
-                <p>Crestline owns and maintains a large fleet of late model 
-equipment to fit our clients needs. With over 150 pieces of 
-rolling stock, we have the equipment needed to get the job 
-done right, no matter how big or small.</p>
-                    <a href="/equipment" class="link">See our equipment</a>
-              </div>
-          </div>
-          <div class="col-sm-4">
-             <img src="/wp-content/themes/crestline/public/images/home-section-3-3.jpg" class="img-responsive center-block">    
-               <div class="txt">
-                <h3>fully equipped.</h3>
-                <p>Crestline owns and maintains a large fleet of late model 
-equipment to fit our clients needs. With over 150 pieces of 
-rolling stock, we have the equipment needed to get the job 
-done right, no matter how big or small.</p>
-                    <a href="/equipment" class="link">See our equipment</a>
-              </div>
-          </div>
-        </div>
-    </div>
--->
-    
-    <?php if( have_rows('image_blocks') ): ?>
-
-	 <div class="container-fluid three-col">
-        <div class="row col-padding">
-
-	<?php while( have_rows('image_blocks') ): the_row(); 
-
-		// vars
-		$image = get_sub_field('image');
-		$content = get_sub_field('content');
-        $url = get_sub_field('url');
-         $button_text = get_sub_field('button_text');
-		?>
-
-		 <div class="col-sm-4">
-             
-             <a href="<?php echo $url ?>"><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $image['url'] ?>')"></div></a>
-            <div class="txt">
-                <?php echo $content; ?>
-                 <a href="<?php echo $url ?>" class="link"><?php echo $button_text ?></a>
-            </div>
-
-		</div>
-
-	<?php endwhile; ?>
-
-	</div>
-    </div>
-
-<?php endif; ?>
-    
-    <?php if( $fourth_row_image): ?>
-    <div class="container-fluid">
-             <div class="bg-img promo-img" style="background-image: url('<?php echo $fourth_row_image ?>')">
-                <div class="center txt">
-                 <h1><?php echo $fourth_row_text ?></h1>
-                 </div>
-            </div>
-        </div>
-    
-    
      <?php endif; ?> 
+        
+
+       <div class="text-slider-full">
+            <?php
+        // Hero Slider
+        get_template_part( 'partials/global/fullscreen_slider' ); ?>
+             </div>
+        
+         <?php if( $second_promo_image): ?>
+        <div class="container-fluid">
+                 <div class="bg-img promo-img" style="background-image: url('<?php echo $second_promo_image ?>')">
+                    <div class="center txt">
+                     <h1><?php echo $second_promo_title ?></h1>
+                     <a href="<?php echo $second_promo_button_link ?>" class="btn"><?php echo $second_promo_button_text ?></a>
+                     </div>
+                </div>
+            </div>
+     <?php endif; ?>
+        
+        
+     <div class="row text-center center-block  col-padding row-related">
+            <?php $posts = get_field('related_projects');
+
+            if( $posts ): ?>
+
+                <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                <div class="related-projects col-sm-4">
+                <?php setup_postdata($post); ?>
+                <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+                <a href="<?php the_permalink(); ?>"><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $url ?>')">
+                <div class="title"><?php the_title(); ?></div>
+                </div></a>
+                </div>
+                <?php endforeach; ?>
+
+                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+            <?php endif; ?>
+        </div>    
+        
+        
+    </div>
+    
+    
+  
+
+    
+   
         
 
     

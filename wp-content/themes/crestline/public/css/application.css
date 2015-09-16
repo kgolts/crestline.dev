@@ -3027,6 +3027,19 @@ html[xmlns] .flexslider .slides {
       .row.col-padding [class*="col-"]:last-child {
         padding-left: 10px !important; } }
 
+.row.col-padding-2 {
+  margin-left: 0px !important;
+  margin-right: 0px !important; }
+  .row.col-padding-2 [class*="col-"] {
+    margin-top: 10px; }
+  @media only screen and (min-width: 769px) {
+    .row.col-padding-2 {
+      margin-bottom: 0px; }
+      .row.col-padding-2 [class*="col-"]:first-child {
+        padding-right: 10px !important; }
+      .row.col-padding-2 [class*="col-"]:last-child {
+        padding-left: 0px !important; } }
+
 @media only screen and (min-width: 769px) {
   .container-fluid .marquee-margin > .row {
     margin-left: 10px !important; } }
@@ -3311,7 +3324,7 @@ body.mobile .wow {
           .navbar-default .caret {
             /* on retina, use image that's scaled by 2 */
             background-image: url("../images/icon-arrow-white@2x.png"); } } }
-  .navbar-default .current-menu-parent .caret, .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > li > a:focus .caret, .navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret, .navbar-default .navbar-nav > li.current-page-ancestor > a .caret {
+  .navbar-default .current-menu-parent .caret, .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > li > a:focus .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret {
     background: url("../images/nav-caret-green.png") no-repeat;
     background-size: 7px 11px;
     display: block;
@@ -3324,11 +3337,11 @@ body.mobile .wow {
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out; }
     @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-      .navbar-default .current-menu-parent .caret, .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > li > a:focus .caret, .navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret, .navbar-default .navbar-nav > li.current-page-ancestor > a .caret {
+      .navbar-default .current-menu-parent .caret, .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > li > a:focus .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret {
         /* on retina, use image that's scaled by 2 */
         background-image: url("../images/nav-caret-green@2x.png"); } }
     @media screen and (max-width: 768px) {
-      .navbar-default .current-menu-parent .caret, .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > li > a:focus .caret, .navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret, .navbar-default .navbar-nav > li.current-page-ancestor > a .caret {
+      .navbar-default .current-menu-parent .caret, .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > li > a:focus .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret {
         background: url("../images/icon-arrow-white.png") no-repeat;
         background-size: 8px 5px;
         display: block;
@@ -3336,11 +3349,11 @@ body.mobile .wow {
         height: 5px;
         display: inline-block; }
         @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-          .navbar-default .current-menu-parent .caret, .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > li > a:focus .caret, .navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret, .navbar-default .navbar-nav > li.current-page-ancestor > a .caret {
+          .navbar-default .current-menu-parent .caret, .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > li > a:focus .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav > .active > a:focus .caret {
             /* on retina, use image that's scaled by 2 */
             background-image: url("../images/icon-arrow-white@2x.png"); } } }
   @media only screen and (min-width: 769px) {
-    .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav .dropdown.hover > a .caret {
+    .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav .dropdown.hover > a .caret, .navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > li.current-page-ancestor > a .caret {
       background: url("../images/nav-caret-over.png") no-repeat;
       background-size: 10px 6px;
       display: block;
@@ -3349,11 +3362,11 @@ body.mobile .wow {
       display: inline-block;
       border: 0px; }
       @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-        .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav .dropdown.hover > a .caret {
+        .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav .dropdown.hover > a .caret, .navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > li.current-page-ancestor > a .caret {
           /* on retina, use image that's scaled by 2 */
           background-image: url("../images/nav-caret-over@2x.png"); } }
       @media screen and (max-width: 768px) {
-        .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav .dropdown.hover > a .caret {
+        .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav .dropdown.hover > a .caret, .navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > li.current-page-ancestor > a .caret {
           background: url("../images/icon-arrow-white.png") no-repeat;
           background-size: 8px 5px;
           display: block;
@@ -3361,7 +3374,7 @@ body.mobile .wow {
           height: 5px;
           display: inline-block; }
           @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-            .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav .dropdown.hover > a .caret {
+            .navbar-default .navbar-nav > li > a:hover .caret, .navbar-default .navbar-nav > .active > a:hover .caret, .navbar-default .navbar-nav .dropdown.hover > a .caret, .navbar-default .navbar-nav > .active > a .caret, .navbar-default .navbar-nav > li.current-page-ancestor > a .caret {
               /* on retina, use image that's scaled by 2 */
               background-image: url("../images/icon-arrow-white@2x.png"); } } } }
   .navbar-default .open .caret {
@@ -3417,7 +3430,7 @@ body.mobile .wow {
         left: auto;
         right: -13px;
         display: none;
-        min-width: 160px;
+        min-width: 180px;
         position: absolute; } }
     .navbar-default .dropdown-menu li > a {
       font-size: 22px;
@@ -3868,11 +3881,22 @@ a > .bg-img {
     @media only screen and (min-width: 769px) {
       .bg-img.home-1-img {
         height: 800px; } }
+  .bg-img.about-1-img {
+    height: 400px; }
+    @media only screen and (min-width: 769px) {
+      .bg-img.about-1-img {
+        height: 810px; } }
   .bg-img.home-2-img {
     height: 240px; }
     @media only screen and (min-width: 769px) {
       .bg-img.home-2-img {
         height: 400px; } }
+  .bg-img.about-3-img {
+    height: 240px; }
+    @media only screen and (min-width: 769px) {
+      .bg-img.about-3-img {
+        height: 400px;
+        margin-top: 10px; } }
   .bg-img.relatedprojects {
     height: 250px; }
     @media only screen and (min-width: 769px) {
@@ -4121,11 +4145,88 @@ p.quote-attribute {
   color: #fff;
   text-transform: uppercase; }
 
+.about .row-related {
+  margin-top: 10px; }
+
 .row-related {
   display: none; }
   @media only screen and (min-width: 769px) {
     .row-related {
       display: block; } }
+
+.capabilities {
+  margin-top: 60px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: #03b555;
+  color: #fff; }
+  .capabilities h3 {
+    font-size: 50px;
+    font-size: 3.125rem; }
+  .capabilities li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    list-style-position: outside;
+    margin-left: 1em; }
+    @media only screen and (min-width: 769px) {
+      .capabilities li {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-size: 1.125rem; } }
+  @media only screen and (min-width: 769px) {
+    .capabilities ul {
+      -moz-column-count: 2;
+      -moz-column-gap: 10px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 10px;
+      column-count: 2;
+      column-gap: 10px; } }
+  @media only screen and (min-width: 992px) {
+    .capabilities ul {
+      -moz-column-count: 3;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 20px;
+      column-count: 3;
+      column-gap: 20px; } }
+
+.about p {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  color: #8c847f; }
+
+.text-slider-full {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px; }
+  .text-slider-full .flex-viewport {
+    padding-bottom: 25px; }
+  .text-slider-full p {
+    font-size: 28px;
+    font-size: 1.75rem; }
+    @media only screen and (min-width: 769px) {
+      .text-slider-full p {
+        font-size: 33px;
+        font-size: 2.0625rem; } }
+  .text-slider-full p.quoter {
+    font-size: 22px;
+    font-size: 1.375rem;
+    color: #4f3c32; }
+  @media only screen and (min-width: 769px) {
+    .text-slider-full {
+      max-width: 995px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 100px;
+      margin-bottom: 60px; } }
+  .text-slider-full .flex-direction-nav {
+    display: none; }
+  .text-slider-full .flex-viewport {
+    max-height: 370px; }
 
 .site-footer, #push {
   height: 580px; }
@@ -4152,7 +4253,11 @@ p.quote-attribute {
       .site-footer .pull-right {
         margin-right: 120px;
         margin-left: 45px;
+        margin-top: 75px;
         float: right !important; } }
+    .site-footer .pull-right .btn {
+      height: 60px;
+      line-height: 60px; }
   .site-footer .site-info {
     margin: 0 auto; }
     @media only screen and (min-width: 769px) {

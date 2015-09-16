@@ -257,11 +257,30 @@ div.page {
         
     }
     
+     &.about-1-img {
+        height: 400px;
+         @include respond-to($screen-sm) {
+            height: 810px;
+         }
+        
+    }
+    
      &.home-2-img {
         height: 240px;
          
            @include respond-to($screen-sm) {
            height: 400px;
+         }
+      
+        
+    }
+    
+     &.about-3-img {
+        height: 240px;
+         
+           @include respond-to($screen-sm) {
+           height: 400px;
+            margin-top: 10px;
          }
       
         
@@ -574,9 +593,111 @@ p.quote-attribute {
     
 }
 
+.about .row-related {
+    margin-top: 10px;
+}
+
 .row-related {
     display: none;
       @include respond-to($screen-sm) {
         	display: block;
     }
+}
+
+
+.capabilities {
+    margin-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+        background-color: $crest-green;
+         color:#fff;
+    h3 {
+       
+          @include font-size(50px);
+    }
+    
+    li {
+        margin-bottom: 10px;
+         @include font-size(15px);
+       list-style-position: outside;
+          margin-left: 1em;
+        
+          @include respond-to($screen-sm) {
+                margin-bottom: 20px;
+               @include font-size(18px);
+          }
+    }
+    
+    ul {
+
+  
+         @include respond-to($screen-sm) {
+          -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    column-count: 2;
+    column-gap: 10px;
+         }
+        
+         @include respond-to($screen-md) {
+            -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+         }
+}
+    
+}
+
+.about {
+    p {
+         @include font-size(15px);
+        color: $gray-txt;
+    }
+}
+
+.text-slider-full {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    .flex-viewport {
+        padding-bottom: 25px;
+    }
+    
+    p {
+           @include font-size(28px);
+         @include respond-to($screen-sm) {
+            @include font-size(33px);
+         }
+    }
+    
+    p.quoter {
+         @include font-size(22px);
+        color: $black-txt;
+    }
+    
+     margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    
+       @include respond-to($screen-sm) {
+    max-width: 995px;
+    padding-left: 20px;
+    padding-right: 20px;
+               margin-top: 100px;
+    margin-bottom: 60px;
+       }
+   
+    .flex-direction-nav {
+        display: none;
+    }
+    
+    .flex-viewport {
+        max-height: 370px;
+    }
+    
 }

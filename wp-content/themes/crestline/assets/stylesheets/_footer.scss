@@ -28,8 +28,14 @@
          @include respond-to($screen-sm) {
              margin-right: 120px;
               margin-left: 45px;
+              margin-top: 75px;
              float:right !important;
          }
+        
+        .btn {
+            height: 60px;
+line-height: 60px;
+        }
     }
     
     .site-info {

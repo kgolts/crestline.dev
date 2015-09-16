@@ -213,13 +213,6 @@
                 "operator": "==",
                 "value": "front-page.php"
             }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "templates\/about.php"
-            }
         ]
     ],
     "menu_order": 0,
@@ -230,5 +223,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1442356805
+    "modified": 1442357566
 }

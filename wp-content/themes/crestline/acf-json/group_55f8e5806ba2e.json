@@ -1,11 +1,11 @@
 {
-    "key": "group_55f89e98eb633",
-    "title": "About Content",
+    "key": "group_55f8e5806ba2e",
+    "title": "Team Content",
     "fields": [
         {
-            "key": "field_55f89ea8f2fe4",
-            "label": "Top Images",
-            "name": "top_images",
+            "key": "field_55f8e588d335b",
+            "label": "Team Images",
+            "name": "team_images",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -21,7 +21,7 @@
             "button_label": "Add Row",
             "sub_fields": [
                 {
-                    "key": "field_55f89ec0f2fe5",
+                    "key": "field_55f8e5a9d335c",
                     "label": "image",
                     "name": "image",
                     "type": "image",
@@ -47,9 +47,133 @@
             ]
         },
         {
-            "key": "field_55f89ee79e2d4",
-            "label": "Capabilities",
-            "name": "capabilities",
+            "key": "field_55f8e5f233f6a",
+            "label": "Field Staff Images",
+            "name": "staff_images",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_55f8e62e50323",
+                    "label": "image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_55f8e6f5d48cf",
+            "label": "Team Bios",
+            "name": "team_bios",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_55f8e71dd48d0",
+                    "label": "name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_55f8e724d48d1",
+                    "label": "job title",
+                    "name": "job_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_55f8e72dd48d2",
+                    "label": "body",
+                    "name": "body",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 1
+                }
+            ]
+        },
+        {
+            "key": "field_55f8e77b9c2b7",
+            "label": "Field Staff Content",
+            "name": "staff_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -65,10 +189,10 @@
             "media_upload": 1
         },
         {
-            "key": "field_55f89f129e2d5",
-            "label": "Promos",
-            "name": "promos",
-            "type": "repeater",
+            "key": "field_55f8eab4d4d0b",
+            "label": "Field Staff Images 2",
+            "name": "staff_images_2",
+            "type": "flexible_content",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -77,121 +201,45 @@
                 "class": "",
                 "id": ""
             },
+            "button_label": "Add Row",
             "min": "",
             "max": "",
-            "layout": "table",
-            "button_label": "Add Row",
-            "sub_fields": [
+            "layouts": [
                 {
-                    "key": "field_55f89f3d9e2d6",
-                    "label": "image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_55f89f6351841",
-                    "label": "title",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
-                    "key": "field_55f89f7d51842",
-                    "label": "button link",
-                    "name": "button_link",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_55f89fb051843",
-                    "label": "button text",
-                    "name": "button_text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
+                    "key": "55f8eac9945ba",
+                    "name": "",
+                    "label": "",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_55f8eaeed4d0c",
+                            "label": "",
+                            "name": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ]
-        },
-        {
-            "key": "field_55f8a47dfa880",
-            "label": "Related Projects",
-            "name": "related_projects",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [],
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object"
         }
     ],
     "location": [
@@ -199,7 +247,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "templates\/about.php"
+                "value": "templates\/team.php"
             }
         ]
     ],
@@ -211,5 +259,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1442358777
+    "modified": 1442376497
 }
