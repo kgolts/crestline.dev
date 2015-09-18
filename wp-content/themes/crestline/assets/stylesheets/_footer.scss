@@ -51,53 +51,11 @@ line-height: 60px;
     
     .copyright {
         margin-top: 40px;
+        color: #b4b3b3;
 
     }
     
-    ul {margin: 0; padding: 0; list-style: none;}
-    ul.share-icons li {
-        list-style: none;
-        display: inline-block;
-        margin-right: 25px;
-        margin-top: 20px;
-        
-        a {
-            text-indent: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            color: transparent;
-            display: inline-block;
-        }
-       
-        &.facebook a {        
-            background: url("../images/icon-facebook.png") no-repeat;
-            @include image-2x("../images/icon-facebook@2x.png",10px, 20px);
-        }
-        
-        &.twitter a {        
-            background: url("../images/icon-twitter.png") no-repeat;
-            @include image-2x("../images/icon-twitter@2x.png",23px, 18px);
-        }
-        
-        &.google-plus a {        
-            background: url("../images/icon-google.png") no-repeat;
-            @include image-2x("../images/icon-google@2x.png",21px, 21px);
-        }
-        
-        &.email a {        
-            background: url("../images/icon-email.png") no-repeat;
-            @include image-2x("../images/icon-email@2x.png",19px, 19px);
-        }
-        
-         &.dalles-chamber a {        
-            background: url("../images/icon-dalles.png") no-repeat;
-            @include image-2x("../images/icon-dalles@2x.png",122px, 96px);
-        }
-        
-        &.dalles-port a {        
-            background: url("../images/icon-port.png") no-repeat;
-            @include image-2x("../images/icon-port@2x.png",271px, 49px);
-        }
-    }
+   
 }
+
 

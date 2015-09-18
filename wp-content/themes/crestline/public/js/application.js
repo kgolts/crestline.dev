@@ -198,9 +198,8 @@ mobileFixes = function(thiswidth){
     if (isMobile()){
     $('li.project-updates').insertAfter( $('li.first-nav-item'));
      $(".order-content-b").insertBefore($(".order-content-a"));
-
     } else{
-        $( "#menu-nested-pages" ).append( $( "li.project-updates" ) );
+        $( "#menu-main-menu" ).append( $( "li.project-updates" ) );
          $(".order-content-a").insertBefore($(".order-content-b"));
 
         }

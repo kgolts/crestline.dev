@@ -6,7 +6,7 @@
         <li>
             <img src="<?php the_sub_field('slide-image'); ?>" alt="" />
             <p class="flex-caption"><?php the_sub_field('slide-content'); ?></p>
-        </li>
+            </li>
     <?php endwhile; ?>
     </ul>
     </div>

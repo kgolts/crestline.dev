@@ -85,11 +85,6 @@
 
 
 
-.container-fluid .marquee-margin > .row {
-      @include respond-to($screen-sm) {
-           margin-left: 10px !important;
-          }
-}
 
 .container-fluid.home-marquee {
      .row.margin-fix {

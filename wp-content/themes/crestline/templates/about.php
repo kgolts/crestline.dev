@@ -35,7 +35,7 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
 
 <div id="primary" class="content-area about">
     
-    <div class="container-fluid home-marquee">
+    <div class="container-fluid home-marquee page-top">
 		<div class="row">
                 <div class="col-lg-8 col-sm-7">
                     <div class="bg-img about-1-img" style="background-image: url('<?php echo $first_row_image ?>')">
@@ -64,7 +64,7 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
     <div class="container-fluid">
         <div class="row">
        
-            <div class="txt  col-sm-8">
+            <div class="txt  col-sm-8 header-txt">
                <h4><?php
     echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
     ?></h4>
@@ -85,7 +85,7 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
         <div class="container-fluid">
                  <div class="bg-img promo-img" style="background-image: url('<?php echo $first_promo_image ?>')">
                     <div class="center txt">
-                     <h1><?php echo $first_promo_title ?></h1>
+                     <h1 class="no-max-width"><?php echo $first_promo_title ?></h1>
                      <a href="<?php echo $first_promo_button_link ?>" class="btn"><?php echo $first_promo_button_text ?></a>
                      </div>
                 </div>

@@ -42,6 +42,42 @@
             "media_upload": 0
         },
         {
+            "key": "field_55fb5020a0b31",
+            "label": "features list",
+            "name": "features_list",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1
+        },
+        {
+            "key": "field_55fb4fbc4f539",
+            "label": "alert text",
+            "name": "alert_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1
+        },
+        {
             "key": "field_55f857ac7c6ca",
             "label": "map",
             "name": "map",
@@ -104,5 +140,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1442342437
+    "modified": 1442533436
 }

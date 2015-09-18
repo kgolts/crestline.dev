@@ -16,7 +16,7 @@
             
              <?php
             wp_nav_menu( array(
-                'menu'              => 'nested-pages',
+                'menu'              => 'main-menu',
                 'theme_location'    => 'crestline',
                 'depth'             => 2,
                 'container'         => 'div',

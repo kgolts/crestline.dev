@@ -1,66 +1,24 @@
 <?php
-// Template Name: Projects Detail
+// Template Name: Contact
 ?>
 <?php get_header(); ?>
 
-<div id="primary" class="content-area page project">
+<div id="primary" class="content-area page project contact">
 
     <div class="container-fluid">            
         <div class="row">
        
-            <div class="full-width col-sm-8 top-txt header-txt">
-                <div class="txt">
+            <div class="txt full-width col-sm-8  header-txt">
                 <h4 class="top"><?php
     echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
     ?></h4>
-                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                <h3><?php the_field ('location_title' ); ?></h3>
-                    </div>
-            </div>
-            <?php if( get_field( "alert_text" ) ): ?>
-                  <div class="col-sm-3 col-md-offset-1">
-                      <div class="alert-text">
-                        <?php the_field('alert_text'); ?>
-                      </div>
-                </div>
-                <?php endif; ?>
-        </div>
-        
-         <div class="row">
-            <div class="col-sm-8 max-lg">
-                <div class="txt top-txt">
-                <?php the_content(); ?>
-                </div>
-             </div>
-           
-            
-             <div class="col-sm-3 col-md-offset-1">
-                 <?php if( get_field( "features_list" ) ): ?>
-                    <?php the_field('features_list'); ?>
-                <?php endif; ?>
+                 <?php the_content(); ?>
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-sm-12">
-                        <?php
-                    // Hero Slider
-                    get_template_part( 'partials/global/fullscreen_slider' ); ?>
-            </div>           
-        </div>
+       
         
-        <?php if( get_field( "text_block" ) ): ?>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="txt-block">
-                <div class="center txt">
-                 
-                   <?php the_field('text_block'); ?>
-                </div>
-            </div>
-            </div>
-        </div>
-       <?php endif; ?>
+     
         
         <?php 
         $location = get_field('map');

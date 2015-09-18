@@ -1,5 +1,5 @@
 <?php
-// Template Name: Projects Landing
+// Template Name: Project Updates Landing
 ?>
 <?php get_header(); ?>
 
@@ -20,7 +20,7 @@
 		                  
                               <div class="row col-padding">
                             <?php
-                                $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
+                                $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
                                 //col vars
                                 $colnum = 3;
                                 $counter = 0;

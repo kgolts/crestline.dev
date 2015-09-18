@@ -9,13 +9,13 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<div class="container">
 		<div class="row">
-			<main id="main" class="site-main" role="main">
-				<div class="col-sm-8">
+			
+				<div class="col-sm-8 txt">
 
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
-						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+						<h2 class="page-title"><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
@@ -40,7 +40,7 @@ get_header(); ?>
 
 				<?php endif; ?>
 				</div>
-			</main>
+			
 
 			<?php get_sidebar(); ?>
 
