@@ -6,7 +6,7 @@
     
     @include respond-to($screen-sm) {
         min-height: 155px;
-          min-width: 850px;
+          min-width: 900px;
     }
     
     .container {
@@ -26,6 +26,7 @@
         text-indent: 200%;
         white-space: nowrap;
        top:16px; 
+        z-index: 10000;
       
         display: block;
     }
@@ -40,16 +41,26 @@
     }
     
     .navbar-nav>li>a {
-        font-size: 38px;
+        
+             -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
+        
+        font-size: 30px;
          color: #fff;
         text-transform: uppercase;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         font-family: $title-font-narrow;
+        line-height: 30px;
+        padding-top: 15px;
+        padding-bottom: 0px;
         
         @include respond-to($screen-sm) {
             color:$black-txt;
             @include font-size(18px);
             margin-bottom: 0px;
+             padding-top: 0px;
         }
     }
     
@@ -140,7 +151,7 @@
     .navbar-nav>.open>a,  .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus, li.current-menu-parent > a,   .navbar-nav>.active>a,  .navbar-nav>.active>a:hover,  .navbar-nav>.active>a:focus   {
         
          background:$crest-green;
-        
+         color:#fff;
           @include respond-to($screen-sm) {
                   color: $crest-green;
                 background: #fff;
@@ -164,6 +175,7 @@
         width:100%;
         float: none;
         
+        
         @include respond-to($screen-sm) {
             color: #fff;
              background: $crest-green;
@@ -181,12 +193,21 @@
        
         
         li>a {
-            font-size: 22px;
-            margin-bottom: 15px;
+           
+              -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: color 0 ease-in;
+    transition: none;
             
+            
+            font-size: 18px;
+            margin-bottom: 5px;
+             font-family: $title-font;
+             color: #fff;
              @include respond-to($screen-sm) {
                     font-size: 15px;
                    margin-bottom: 0px;
+                  font-family: $font-family-sans-serif;
              }
         }
         
@@ -214,6 +235,7 @@
             color:#fff;
         }
         
+          @include respond-to($screen-sm) {
         &:before {
                content: "\A";
     border-style: solid;
@@ -223,10 +245,11 @@
     right: 18px;
     top: -10px;
         }
+          }
     }
     
      .navbar-push-left.in  .dropdown-menu {
-         display: block;
+         display: none;
          
           @include respond-to($screen-sm) {
             display: none;
@@ -244,25 +267,33 @@
     
     
     
-     li.project-updates {
+     li.project-updates, li.project-updates.active {
             background: #fff;
+            margin-top: 15px;
+         
          a {
             color: $red-txt;
+            padding-top: 26px;
+            padding-bottom: 20px;
+              background: #fff;
            
             &:hover {color: $red-txt;}
          }
          @include respond-to($screen-sm) {
-                
+                 margin-top: 0px;
              a, &>a, &>a:hover {color: $black-txt;
-                  background: url("../images/icon-nav-cone.png") no-repeat;
-            @include image-2x("../images/icon-nav-cone@2x.png",30px, 30px);
-             width: auto;
-             height: auto;
-             background-position-y: 10px;
-                 background-position: left center;
-            height: auto;
-            text-indent: 20px;
-            margin-left: 10px;
+                background: url("../images/icon-nav-cone.png") no-repeat;
+                @include image-2x("../images/icon-nav-cone@2x.png",30px, 30px);
+                width: auto;
+                height: auto;
+                background-position-y: 10px;
+                background-position: left center;
+                height: auto;
+                text-indent: 20px;
+                margin-left: 10px;
+                   padding-top: 0px;
+                padding-bottom: 0px;
+                 
                  &:hover {color: $crest-green;}
              }
              }
@@ -292,7 +323,9 @@
     
 }
 
+
   body:not(.mobile) .dropdown:hover .dropdown-menu {
+       display: block;
          @include respond-to($screen-sm) {
             display: block;
          }
@@ -330,10 +363,10 @@ a.navbar-brand {
 }
 
  .navbar-fixed-top {
-   
+    
        border-bottom: solid $gray-border 1px;
       @include respond-to($screen-sm) {
-       position: fixed !important;
+       position: fixed;
     }
    
 }
@@ -342,11 +375,11 @@ a.navbar-brand {
 
 .navbar-nav {
      
-      margin-top: 85px;
+      margin-top: 65px;
     
      @include respond-to($screen-sm) {
         float: right;
-         margin-top: 100px;
+         margin-top: 110px;
        
      }
     
@@ -445,11 +478,26 @@ div {
 
 
 @media screen and (max-width: 768px) {
+    
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color:#fff;
+    }
+    
     .push-canvas {
-        -webkit-transition: all .20s ease-out;
-        -moz-transition: all .20s ease-out;
-        -o-transition: all .20s ease-out;
-        transition: all .20s ease-out;
+//        -webkit-transition: all .20s ease-out;
+//        -moz-transition: all .20s ease-out;
+//        -o-transition: all .20s ease-out;
+//        transition: all .20s ease-out;
+        
+        
+            -webkit-transition: all .20s ease-out;
+            -moz-transition: all .20s ease-out, font-size 0s;
+            -ms-transition: all .20s ease-out, font-size 0s;
+            -o-transition: all .20s ease-out, font-size 0s;
+            transition: all .20s ease-out;
+             transition-property:left, right, display;
+               -webkit-transition-property:left, right, display;
+        
 
         overflow-x: hidden;
         position: relative;
@@ -465,13 +513,25 @@ div {
     }
     
     .navbar-push {
+//        -webkit-transition: all .20s ease-out;
+//        -moz-transition: all .20s ease-out;
+//        -o-transition: all .20s ease-out;
+//        transition: all .20s ease-out;
+        
         -webkit-transition: all .20s ease-out;
-        -moz-transition: all .20s ease-out;
-        -o-transition: all .20s ease-out;
-        transition: all .20s ease-out;
+            -moz-transition: all .20s ease-out, font-size 0s;
+            -ms-transition: all .20s ease-out, font-size 0s;
+            -o-transition: all .20s ease-out, font-size 0s;
+            transition: all .20s ease-out;
+        
+             transition-property:all;
+               -webkit-transition-property:all;
 
         height: 100%;
         position: fixed;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
         width: 100%;
         top: 0;
            background-color: $crest-green;  
@@ -497,6 +557,7 @@ div {
     
     .navbar-nav li a {
         text-align: center;
+        color:#fff;
     }
 
       .navbar-default .navbar-toggle {
@@ -532,5 +593,17 @@ div {
 body.page-template-front-page .nabar-fixed-top {
      border-bottom:0px !important;
      border:0px !important;
+     border-width: 23px;   
 }
 
+body.mobile {
+      .navbar-push {
+     overflow-y:auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+      }
+}
+
+body.pushed-left {
+    overflow: hidden;
+}

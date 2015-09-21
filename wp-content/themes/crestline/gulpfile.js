@@ -1,6 +1,7 @@
 (function() {
 
   var gulp = require('gulp');
+  var plumber = require('gulp-plumber');
   var gutil = require('gulp-util');
   var concat = require('gulp-concat');
   var uglify = require('gulp-uglify');
@@ -108,6 +109,12 @@
     del(['public/fonts/'], cb);
   });
 
+    
+ var onError = function (err) {  
+      gutil.beep();
+      console.log(err);
+     
+    };
 
   gulp.task('scripts:vendor', function(){
     return gulp.src(paths.vendorScripts)
@@ -130,6 +137,10 @@
   });
   gulp.task('styles', function(){
     return gulp.src(paths.styles)
+      .pipe(plumber(function (error) {
+            errorHandler: onError;
+                this.emit('end');
+            }))
       .pipe(sass({
         precision: 10
       }))
@@ -140,7 +151,7 @@
       .pipe(uglifycss())
       .pipe(gulp.dest('public/css'))
       .pipe(livereload())
-     .on('error', gutil.log)
+    // .on('error', gutil.log)
     
   });
 

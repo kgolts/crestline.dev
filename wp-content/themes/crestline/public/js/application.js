@@ -157,10 +157,7 @@ function viewport() {
 
 
 $(document).ready(function() {
-//  $('[data-toggle=offcanvas]').click(function() {
-//    $('.row-offcanvas').toggleClass('active');
-//    $('.showhide').toggle();
-//  });
+
     $('.close-btn-mobile').on('click', function(){
         $('.navbar-toggle').click() //bootstrap 3.x by Richard
         
@@ -185,7 +182,7 @@ $(document).ready(function() {
 
 
 fixNavDropDowns = function(){
-    if (!isMobile() && $('body').hasClass('mobile')) {
+    if ($('body').hasClass('mobile')) {
           $(".dropdown-toggle").attr('data-toggle', 'dropdown');
         } else {
           $(".dropdown-toggle").removeAttr('data-toggle dropdown');
