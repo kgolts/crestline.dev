@@ -6,7 +6,7 @@
     
     @include respond-to($screen-sm) {
         min-height: 155px;
-          min-width: 900px;
+          min-width: 930px;
     }
     
     .container {
@@ -14,6 +14,8 @@
 //        margin: 0 auto;
     }
 }
+
+
 
 .navbar-default {
     background-color: #fff;
@@ -55,13 +57,27 @@
         line-height: 30px;
         padding-top: 15px;
         padding-bottom: 0px;
+          margin-left: 0px;
+        
+        
         
         @include respond-to($screen-sm) {
             color:$black-txt;
             @include font-size(18px);
             margin-bottom: 0px;
              padding-top: 0px;
+              margin-left: 0px;
         }
+        
+         @include respond-to($screen-md) {
+               margin-left: 25px;
+          }
+        
+          @include respond-to($screen-lg) {
+               margin-left: 25px;
+          }
+        
+        
     }
     
     .with-gutter {
@@ -281,6 +297,8 @@
          }
          @include respond-to($screen-sm) {
                  margin-top: 0px;
+             
+            
              a, &>a, &>a:hover {color: $black-txt;
                 background: url("../images/icon-nav-cone.png") no-repeat;
                 @include image-2x("../images/icon-nav-cone@2x.png",30px, 30px);
@@ -294,8 +312,14 @@
                    padding-top: 0px;
                 padding-bottom: 0px;
                  
-                 &:hover {color: $crest-green;}
+                 &:hover {color:$red-txt;}
              }
+             
+              &.active a, &.active a:hover {
+                color: $red-txt !important;
+             }
+             
+             
              }
         }
     
@@ -343,21 +367,22 @@
 
 a.navbar-brand {
       background: url("../images/logo.png") no-repeat;
-    @include image-2x("../images/logo@2x.png", 93px, 58px);
+    @include image-2x("../images/logo@2x.png", 145px, 59px);
     display: block;
      text-indent: 200%;
   white-space: nowrap;
   overflow: hidden;
     margin-left: 14px;
-    margin-top: 11px;
+    margin-top: 7px;
     position: relative;
     left:14px;
     
      @include respond-to($screen-sm) {
-        margin-left: 48px !important;
-          margin-top: 20px;
+        margin-left: 50px !important;
+          margin-top: 39px;
+       
            background: url("../images/logo-desktop.png") no-repeat;
-        @include image-2x("../images/logo-desktop@2x.png",185px, 114px);
+        @include image-2x("../images/logo-desktop@2x.png",236px, 96px);
          left:0px;
     }
 }
@@ -367,6 +392,7 @@ a.navbar-brand {
        border-bottom: solid $gray-border 1px;
       @include respond-to($screen-sm) {
        position: fixed;
+          @include transition($transition200);
     }
    
 }
@@ -375,12 +401,12 @@ a.navbar-brand {
 
 .navbar-nav {
      
-      margin-top: 65px;
+      margin-top: 57px;
     
      @include respond-to($screen-sm) {
         float: right;
-         margin-top: 110px;
-       
+         margin-top: 114px;
+          @include transition($transition200);
      }
     
 //       @include respond-between($screen-sm,847px) {
@@ -558,6 +584,9 @@ div {
     .navbar-nav li a {
         text-align: center;
         color:#fff;
+        
+      
+        
     }
 
       .navbar-default .navbar-toggle {
@@ -607,3 +636,42 @@ body.mobile {
 body.pushed-left {
     overflow: hidden;
 }
+
+
+
+      .scrollnav .navbar-default {
+       //bigger than mobile size         
+      @include respond-to($screen-sm) {
+      height: 99px;
+          min-height: 99px;
+          padding-top: 0px;
+      
+      }
+    } //end scrollnav
+
+  .scrollnav  {
+       //bigger than mobile size         
+      @include respond-to($screen-sm) {
+        height: 99px;
+          
+          .navbar-nav {
+            margin-top: 57px;
+            
+          }
+          
+          a.navbar-brand {
+              margin-top: 19px;
+              background: url("../images/logo.png") no-repeat;
+    @include image-2x("../images/logo@2x.png", 145px, 59px);
+          }
+
+        #primary.content-area  {
+              margin-top: 99px !important;
+              }
+
+              #search-form, .close-btn-mobile  {
+                  display: none;
+              }
+          
+      }
+    } //end scrollnav

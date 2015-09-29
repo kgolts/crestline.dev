@@ -182,7 +182,7 @@ h5,
 
 
 #primary.content-area {
-    margin-top: 78px;
+    margin-top: 99px;
       @include respond-to($screen-sm) {
     	margin-top: 155px;
       }
@@ -632,7 +632,7 @@ a > img {
     max-width: 830px;  
     }
     
-    ul li {
+    ul:not(.slides) li {
         list-style-position: inside;
         margin-left: -30px;
         @include font-size(18px);

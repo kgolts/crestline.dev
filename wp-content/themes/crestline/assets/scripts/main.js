@@ -58,13 +58,27 @@ function viewport() {
 
 	}); // END window .load
 
-
+    
 	var throttleTimeOut = 50; //milliseconds before triggering function again
+     var mywindow = $(window);
+     var myTopNav = $('body');
+    
 	// Window Scroll functions
 	$(window).on('scroll', _throttle(function(){
 		/* do your normal scroll stuff here, but it'll be
 		 * more-reasonably controlled, so as to not peg
 		 * the host machine's processor */
+        
+        winPosition = mywindow.scrollTop();
+            if(winPosition > 0) {
+                if(! myTopNav.hasClass('scrollnav')){
+                    myTopNav.addClass('scrollnav');
+                }
+            }else{
+                 myTopNav.removeClass('scrollnav');
+            }
+        
+        
 	}, throttleTimeOut));
 
 	// Window Resize functions

@@ -15,6 +15,19 @@ var Slider = (function($) {
 				prevText: "Previous",
 				nextText: "Next"
 			  });
+                
+                
+                $('#fullscreen_slider_updates').flexslider({
+			    animation: "slide",
+			    slideshow: true, // auto play on load
+			    slideshowSpeed: 4000,
+				animationSpeed: 600,
+				pauseOnHover: true,
+				controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+				directionNav: true, //Boolean: Create navigation for previous/next navigation? (true/false)
+				prevText: "Previous",
+				nextText: "Next"
+			  });
 
 			});
 
@@ -130,13 +143,27 @@ function viewport() {
 
 	}); // END window .load
 
-
+    
 	var throttleTimeOut = 50; //milliseconds before triggering function again
+     var mywindow = $(window);
+     var myTopNav = $('body');
+    
 	// Window Scroll functions
 	$(window).on('scroll', _throttle(function(){
 		/* do your normal scroll stuff here, but it'll be
 		 * more-reasonably controlled, so as to not peg
 		 * the host machine's processor */
+        
+        winPosition = mywindow.scrollTop();
+            if(winPosition > 0) {
+                if(! myTopNav.hasClass('scrollnav')){
+                    myTopNav.addClass('scrollnav');
+                }
+            }else{
+                 myTopNav.removeClass('scrollnav');
+            }
+        
+        
 	}, throttleTimeOut));
 
 	// Window Resize functions

@@ -1,6 +1,6 @@
 
 <?php if( have_rows('slide') ): ?>
-    <div id="fullscreen_slider" class="flexslider image-actual-size">
+    <div id="fullscreen_slider_updates" class="updates flexslider image-actual-size">
     <ul class="slides">
     <?php while( have_rows('slide') ): the_row(); ?>
         <li>
