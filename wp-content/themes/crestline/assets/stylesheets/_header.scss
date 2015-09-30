@@ -44,11 +44,11 @@
     
     .navbar-nav>li>a {
         
-             -moz-transition: none;
-    -webkit-transition: none;
-    -o-transition: color 0 ease-in;
-    transition: none;
-        
+//             -moz-transition: none;
+//    -webkit-transition: none;
+//    -o-transition: color 0 ease-in;
+//    transition: none;
+          @include transition($transition200);
         font-size: 30px;
          color: #fff;
         text-transform: uppercase;
@@ -67,6 +67,7 @@
             margin-bottom: 0px;
              padding-top: 0px;
               margin-left: 0px;
+             padding-bottom: 10px;
         }
         
          @include respond-to($screen-md) {
@@ -210,10 +211,10 @@
         
         li>a {
            
-              -moz-transition: none;
-    -webkit-transition: none;
-    -o-transition: color 0 ease-in;
-    transition: none;
+//              -moz-transition: none;
+//    -webkit-transition: none;
+//    -o-transition: color 0 ease-in;
+//    transition: none;
             
             
             font-size: 18px;
@@ -243,7 +244,7 @@
               background-color: $crest-green;
               color:#fff;
               @include respond-to($screen-sm) {
-              color:#fff;
+              color:#014c23;
              }
         }
         
@@ -276,7 +277,7 @@
         display: block !important;
     }
     
-    li.current-menu-parent .dropdown-menu>a, li.current-page-ancestor .dropdown-menu .current-page-parent a, li.current-menu-ancestor .dropdown-menu .current-menu-parent a{
+    li.current-menu-parent .dropdown-menu>a, li.current-page-ancestor .dropdown-menu, li.current-menu-ancestor .dropdown-menu .current-menu-parent a{
           background:$crest-green;
          color:$black-txt;
     }
@@ -463,7 +464,7 @@ div {
        
     }
     
-    &:hover input.s,  input.s:focus {
+    input.s:focus, &.search-open input.s {
             width: 300px;
             margin-left: 0px;
         }
@@ -494,10 +495,8 @@ div {
             
         &:hover, &:focus {
             box-shadow: none;
-               background-color: $crest-green;
-            -webkit-filter:brightness(1.1);
-            -moz-filter:brightness(1.1);
-            filter: brightness(1.1)
+               background-color: $green-rollover;
+           
         }
     }
 }

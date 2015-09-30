@@ -22,6 +22,9 @@ var Slider = (function($) {
 			    slideshow: true, // auto play on load
 			    slideshowSpeed: 4000,
 				animationSpeed: 600,
+                start: function(){
+                     $('.match-height').matchHeight();
+                },
 				pauseOnHover: true,
 				controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
 				directionNav: true, //Boolean: Create navigation for previous/next navigation? (true/false)
@@ -145,7 +148,7 @@ function viewport() {
 
     
 	var throttleTimeOut = 50; //milliseconds before triggering function again
-     var mywindow = $(window);
+     var mywindow = $(document);
      var myTopNav = $('body');
     
 	// Window Scroll functions
@@ -153,9 +156,11 @@ function viewport() {
 		/* do your normal scroll stuff here, but it'll be
 		 * more-reasonably controlled, so as to not peg
 		 * the host machine's processor */
-        
+        //var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+        //console.log(wintop);
+        //console.log(wintop/(docheight-winheight));
         winPosition = mywindow.scrollTop();
-            if(winPosition > 0) {
+            if(winPosition > 150) {
                 if(! myTopNav.hasClass('scrollnav')){
                     myTopNav.addClass('scrollnav');
                 }
@@ -203,6 +208,27 @@ $(document).ready(function() {
         $(this).parent().toggleClass('hover');
     })
     
+    
+    $('#search-form .btn').on('click',function(){
+      $('#search-form > div').toggleClass('search-open');
+    })
+      
+    
+    $('#search-form').submit(function( event ) {
+      //alert( "Handler for .submit() called." );
+       
+         //$('#search-form > div').addClass('search-open');
+        
+      
+        
+        if($('input.s').val()){
+          return;          
+        }
+        
+        event.preventDefault();
+       
+    });
+
     fixNavDropDowns();
      mobileFixes();
 });

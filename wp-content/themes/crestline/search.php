@@ -6,16 +6,23 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+
+
+
+<div id="primary" class="content-area page project contact">
 	<div class="container">
 		<div class="row">
 			
-				<div class="col-sm-8 txt">
-
-				<?php if ( have_posts() ) : ?>
+				<div class="txt full-width col-sm-8  header-txt">
+                         
+                     <h4 class="top">Search</h4>
+                    
+                    <?php if ( have_posts() ) : ?>
+                    
+                    
 
 					<header class="page-header">
-						<h2 class="page-title"><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
@@ -32,7 +39,7 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
-					<?php the_posts_navigation(); ?>
+				
 
 				<?php else : ?>
 

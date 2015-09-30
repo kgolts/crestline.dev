@@ -29,7 +29,7 @@ $fourth_row_text = $fourth_row['image_text' ]; // get the sub field value
     
     <div class="container-fluid home-marquee">
 		<div class="row">
-                <div class="col-lg-8 col-sm-7">
+                <div class="col-lg-8 col-sm-7 match-height">
                     <div class="bg-img home-1-img" style="background-image: url('<?php echo $first_row_image ?>')">
                         <div class="bottom-left txt">
                             <h1><?php echo $first_row_text ?></h1>
@@ -37,7 +37,7 @@ $fourth_row_text = $fourth_row['image_text' ]; // get the sub field value
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4  col-sm-5 marquee-margin">
+                <div class="col-lg-4  col-sm-5 marquee-margin match-height">
 
                      <div class="row">
                       <div class="order-content-a col-sm-12">
@@ -169,5 +169,12 @@ done right, no matter how big or small.</p>
    
 	
 </div><!-- #primary -->
+
+<script>
+    $(function() {
+        //moved this to slider.js
+       // $('.match-height').matchHeight();
+    });
+</script>
 
 <?php get_footer();?>

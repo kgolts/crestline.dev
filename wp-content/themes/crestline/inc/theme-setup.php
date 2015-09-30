@@ -26,10 +26,11 @@ function tmbr_login_head() {
 	echo "
 	<style>
 		body.login #login h1 a {
-			background: url('".get_bloginfo('template_url')."/assets/images/tmbr_icon_large.png') no-repeat scroll center top transparent;
-			height: 160px;
-			width: 140px;
+			background: url('".get_bloginfo('template_url')."/public/images/logo-desktop.png') no-repeat scroll center top transparent;
+			height: 96px;
+			width: 236px;
 			margin: 0 auto;
+            margin-bottom: 50px;
 		}
 	</style>
 	";

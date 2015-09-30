@@ -22,6 +22,9 @@ var Slider = (function($) {
 			    slideshow: true, // auto play on load
 			    slideshowSpeed: 4000,
 				animationSpeed: 600,
+                start: function(){
+                     $('.match-height').matchHeight();
+                },
 				pauseOnHover: true,
 				controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
 				directionNav: true, //Boolean: Create navigation for previous/next navigation? (true/false)

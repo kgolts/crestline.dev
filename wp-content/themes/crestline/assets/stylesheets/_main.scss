@@ -46,7 +46,7 @@ a, a > img {
 	&:active {
 	  text-decoration: none;
 	  outline: none;
-       color: $gray-txt;
+       color: $green-rollover;
 	}
 }
 
@@ -162,6 +162,7 @@ h5,
     
     &:hover {
         color:#fff;
+        background-color: $green-rollover;
          &:after {
          right: 18px;
         }
@@ -182,9 +183,10 @@ h5,
 
 
 #primary.content-area {
-    margin-top: 99px;
+    margin-top: 78px;
       @include respond-to($screen-sm) {
     	margin-top: 155px;
+           @include transition($transition200);
       }
     
 }
@@ -313,7 +315,8 @@ div.page {
     &.home-1-img {
         height: 400px;
          @include respond-to($screen-sm) {
-            height: 800px;
+            min-height: 800px;
+             height: 100%;
          }
         
     }
@@ -414,10 +417,10 @@ div.page {
     }
     
     div.flex-viewport {
-        max-height: 300px;
-        overflow: auto !important;
-        overflow-y: auto!important;
-         overflow-x: hidden!important;
+//        max-height: 300px;
+//        overflow: auto !important;
+//        overflow-y: auto!important;
+//         overflow-x: hidden!important;
         //overflow: auto;
     }
     
@@ -605,7 +608,7 @@ a > img {
     margin-bottom: 30px;
     
       @include respond-to($screen-sm) {
-         margin-bottom: 60px;
+         margin-bottom: 30px;
         }
     
 }
@@ -671,6 +674,10 @@ p.quote-attribute {
 }
 
 .related-projects {
+    
+    a:hover .title {
+       // color:$green-rollover;
+    }
    
         .title {
             -webkit-font-smoothing: subpixel-antialiased;
@@ -688,6 +695,8 @@ p.quote-attribute {
             line-height: 33px;
             padding-left: 5px;
             padding-right: 5px;
+            text-shadow: 0px 0px 4px rgba(150, 150, 150, 0.76);
+             -webkit-text-shadow: 0px 0px 4px rgba(150, 150, 150, 0.76);
         }
     
 }
@@ -923,8 +932,17 @@ p.quote-attribute {
     }
 }
 
+.header-txt {
+    h3 {margin-top: -10px;}
+}
+
 
 .projects .header-txt, .project .header-txt, .about .header-txt {
+   
+    div.txt, &.txt {
+        max-width: 830px;
+    }
+    
     h1 {
           @include respond-to($screen-sm) {
             @include font-size(88px);
@@ -1034,7 +1052,7 @@ strong {
 h3.green a {
     color:$crest-green;
     &:hover {
-        color:$gray-txt;
+        color:$green-rollover;
     }
     
 }
@@ -1072,4 +1090,11 @@ h3.green a {
     
     }
     
+}
+
+.entry-header {
+    margin-top: 40px;
+}
+.entry-summary {
+    margin-bottom: 40px;
 }

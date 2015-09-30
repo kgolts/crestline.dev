@@ -42,7 +42,7 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
                <h4 class="top"><?php
     echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
     ?></h4>
-                <h2><?php echo get_the_title( $post->ID ) ?></h2>
+                <h1><?php echo get_the_title( $post->ID ) ?></h1>
                 <?php the_content(); ?>
             </div>
         </div>

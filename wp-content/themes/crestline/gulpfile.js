@@ -51,6 +51,8 @@
 
       // WOW depends on animate.css - animate asset loading
       'assets/vendor/wow/dist/wow.js',
+        
+       'assets/vendor/matchHeight/jquery.matchHeight-min.js',    
 
       // Video .JS
       // 'assets/vendor/videojs/dist/video-js/video.js',

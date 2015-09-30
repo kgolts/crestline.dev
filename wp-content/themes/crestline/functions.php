@@ -26,7 +26,7 @@ get_template_part( 'inc/load-scripts' );
 // get_template_part( 'inc/register-taxonomy' );
 
 // REGISTER SIDEBARS
-// get_template_part( 'inc/register-sidebars' );
+ get_template_part( 'inc/register-sidebars' );
 
 // REGISTER MENUS
  get_template_part( 'inc/register-menus' );
