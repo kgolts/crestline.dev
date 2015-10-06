@@ -5,7 +5,10 @@
     
     .txt p {
         color: $gray-txt;
+          @include font-size(14px);
+          @include respond-to($screen-sm) {
            @include font-size(15px);
+          }
     }
 
     .top-border {
@@ -23,7 +26,7 @@
 
     .pull-right {
         float:left !important;
-       margin-left: 10px;
+       margin-left: 20px;
         margin-top: 20px;
          @include respond-to($screen-sm) {
              margin-right: 120px;
@@ -56,6 +59,12 @@
     .copyright {
         margin-top: 40px;
         color: #b4b3b3;
+        i {
+         @include font-size(12px);
+          @include respond-to($screen-sm) {
+           @include font-size(15px);
+          }
+        }
 
     }
     

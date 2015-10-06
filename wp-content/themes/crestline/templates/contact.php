@@ -8,11 +8,13 @@
     <div class="container-fluid">            
         <div class="row">
        
-            <div class="txt full-width col-sm-8  header-txt">
+            <div class="full-width col-sm-8  header-txt">
+                <div class="txt">
                 <h4 class="top"><?php
     echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
     ?></h4>
                  <?php the_content(); ?>
+                </div>
             </div>
         </div>
         

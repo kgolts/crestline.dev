@@ -6,7 +6,7 @@
 <div id="primary" class="content-area page project">
 
     <div class="container-fluid">            
-        <div class="row">
+        <div class="row col-padding">
        
             <div class="full-width col-sm-8 top-txt header-txt max-lg">
                 <div class="txt">
@@ -19,7 +19,7 @@
             </div>
             <?php if( get_field( "alert_text" ) ): ?>
                   <div class="col-sm-3 col-md-offset-1">
-                      <div class="alert-text">
+                      <div class="alert-text txt">
                         <?php the_field('alert_text'); ?>
                       </div>
                 </div>

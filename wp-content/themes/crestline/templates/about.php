@@ -64,19 +64,23 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
     <div class="container-fluid">
         <div class="row">
        
-            <div class="txt  col-sm-8 header-txt">
+            <div class="col-sm-8 header-txt">
+                <div class="txt">
                <h4><?php
     echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent );
     ?></h4>
                 <?php the_content(); ?>
+                </div>
             </div>
         </div>
         
         
         <div class="row capabilities">
-             <div class="txt  col-sm-12">
+             <div class="col-sm-12">
+                 <div class="txt">
                 <h3>Capabilities</h3>
                 <?php the_field ('capabilities' ); ?>
+                 </div>
             </div>
         </div>
         

@@ -100,10 +100,11 @@ endif;
     <div class="container-fluid">
         <div class="row spacer-bottom">
        
-            <div class="txt  col-sm-8  header-txt">
-               
+            <div class="col-sm-8  header-txt">
+               <div class="txt">
                 <h4><?php echo get_the_title( $post->ID ) ?></h4>
                 <?php the_content(); ?>
+                </div>
             </div>
         </div>
         
@@ -118,6 +119,7 @@ endif;
                         <img src="<?php  echo   get_sub_field('image'); ?>" class="img-responsive">
                     </div>
                     <div class="col-sm-6">
+                        <div class="txt">
                         <h5><?php  echo   get_sub_field('top_title'); ?></h5>
                         <h2><?php  echo   get_sub_field('big_title'); ?></h2>
                         <p><?php  echo   get_sub_field('body'); ?></p>
@@ -131,7 +133,7 @@ endif;
                         <?php endif; ?>
                         </p>
                     </div>
-
+                    </div>
                 </div>
 
             <?php endwhile; ?>

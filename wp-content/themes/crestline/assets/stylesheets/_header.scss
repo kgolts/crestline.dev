@@ -56,7 +56,7 @@
         font-family: $title-font-narrow;
         line-height: 30px;
         padding-top: 15px;
-        padding-bottom: 0px;
+        padding-bottom: 7px;
           margin-left: 0px;
         
         
@@ -165,7 +165,7 @@
         
     
     
-    .navbar-nav>.open>a,  .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus, li.current-menu-parent > a,   .navbar-nav>.active>a,  .navbar-nav>.active>a:hover,  .navbar-nav>.active>a:focus   {
+    .navbar-nav>.open>a,  .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus, li.current-menu-parent > a,   .navbar-nav>.active>a,  .navbar-nav>.active>a:hover,  .navbar-nav>.active>a:focus  {
         
          background:$crest-green;
          color:#fff;
@@ -178,7 +178,26 @@
     }
     
     
+    .navbar-nav .open .dropdown-menu>.active>a {
+         background:$crest-green;
+        @include respond-to($screen-sm) {
+                   background:$crest-green;
+                //color:#fff;
+           }
+    }
     
+    
+    .navbar-nav .open .dropdown-menu>li>a {
+          padding: 7px 20px;
+          margin-bottom: 5px;
+          line-height: 1.428571429;
+        @include respond-to($screen-sm) {
+              font-size: 15px;
+                   margin-bottom: 0px;
+                  font-family: $font-family-sans-serif;
+                     padding: 3px 20px;
+        }
+    }
 
     
     .dropdown-menu {
@@ -191,6 +210,7 @@
         position:static;
         width:100%;
         float: none;
+        padding-right: 20px;
         
         
         @include respond-to($screen-sm) {
@@ -204,6 +224,7 @@
            display: none;
             min-width: 180px;
                 position:absolute;
+             padding-right: 0px;
          }
         
         
@@ -221,10 +242,12 @@
             margin-bottom: 5px;
              font-family: $title-font;
              color: #fff;
+                padding: 7px 20px;
              @include respond-to($screen-sm) {
                     font-size: 15px;
                    margin-bottom: 0px;
                   font-family: $font-family-sans-serif;
+                     padding: 3px 20px;
              }
         }
         
@@ -234,7 +257,7 @@
             background-color:  $crest-green;
               color:#fff;
              @include respond-to($screen-sm) {
-              color:$black-txt;
+              color:$brown;
              }
         }
         
@@ -266,7 +289,7 @@
     }
     
      .navbar-push-left.in  .dropdown-menu {
-         display: none;
+         display: block;
          
           @include respond-to($screen-sm) {
             display: none;
@@ -284,9 +307,10 @@
     
     
     
-     li.project-updates, li.project-updates.active {
+     li.project-updates, li.project-updates.active, li.project-updates.current-page-ancestor {
             background: #fff;
             margin-top: 15px;
+            margin-bottom: 15px;
          
          a {
             color: $red-txt;
@@ -298,9 +322,10 @@
          }
          @include respond-to($screen-sm) {
                  margin-top: 0px;
-             
+                 margin-bottom: 0px;
             
-             a, &>a, &>a:hover {color: $black-txt;
+             a, &>a, &>a:hover
+                {color: $black-txt;
                 background: url("../images/icon-nav-cone.png") no-repeat;
                 @include image-2x("../images/icon-nav-cone@2x.png",30px, 30px);
                 width: auto;
@@ -313,10 +338,11 @@
                    padding-top: 0px;
                 padding-bottom: 0px;
                  
-                 &:hover {color:$red-txt;}
+                 &:hover
+                    {color:$red-txt;}
              }
              
-              &.active a, &.active a:hover {
+              &.active a, &.active a:hover,  &.current-page-ancestor>a,  &.current-menu-ancestor>a  {
                 color: $red-txt !important;
              }
              
@@ -626,9 +652,13 @@ body.page-template-front-page .nabar-fixed-top {
 
 body.mobile {
       .navbar-push {
-     overflow-y:auto;
+     overflow-y:scroll;
         -webkit-overflow-scrolling: touch;
-        overflow-x: hidden;
+            overflow-x: hidden;
+           @include respond-to($screen-sm) {
+                overflow-x: visible;
+               overflow-y: visible;
+           }
       }
 }
 

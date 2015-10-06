@@ -186,7 +186,7 @@ h5,
     margin-top: 78px;
       @include respond-to($screen-sm) {
     	margin-top: 155px;
-           @include transition($transition200);
+          // @include transition($transition200);
       }
     
 }
@@ -199,10 +199,27 @@ div.page {
 .txt {
     margin-right: 10px;
     margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
      @include respond-to($screen-sm) {
-    margin-left: 45px;
+            margin-left: 45px;
            margin-right: 0px;
+          padding-left: 0px;
+    padding-right: 0px;
+           -webkit-font-smoothing: subpixel-antialiased;
      }
+    
+    
+    ul {
+        padding-left: 0px;
+        
+        
+    }
+}
+
+.container-fluid.three-col .txt {
+  padding-left: 0px;
+    padding-right: 0px;
 }
 
 
@@ -391,7 +408,7 @@ div.page {
     
     
     p {
-       @include font-size(15px);
+       @include font-size(16px);
         color:$gray-txt;
          margin-left: 14px;
         margin-right: 14px;
@@ -462,8 +479,8 @@ div.page {
         margin-right: 0px !important;
           
           [class*="col-"] {
-           padding-right: 10px !important;
-              padding-left: 10px !important;
+           padding-right: 20px !important;
+              padding-left: 20px !important;
               padding-top: 30px;
           }
           
@@ -504,14 +521,14 @@ div.page {
         margin: 0 auto;
         @include respond-to($screen-sm) {
             @include font-size(50px);
-            margin: 0 0 15px 0;
+            margin: 0 0 16px 0;
             max-width: 360px;
         }
         
     }
     
     p {
-        @include font-size(15px);
+        @include font-size(16px);
         color:$gray-txt;
         max-width: 460px;
         
@@ -524,7 +541,7 @@ div.page {
 }
 
 a.link {
-     @include font-size(15px);
+     @include font-size(16px);
      font-family: $title-font-narrow;
     color:$crest-green;
     position: relative;
@@ -553,6 +570,7 @@ a.link {
           }
          
            &:hover {
+                color:$green-rollover;
                 &:after {
                      right: -20px;
                 }
@@ -578,7 +596,7 @@ a.link {
     }
     
     p {
-         @include font-size(15px);
+         @include font-size(16px);
         color: $gray-txt;
     }
 }
@@ -612,7 +630,7 @@ a > img {
         }
     
 }
-
+  
 .project {
 
     .flexslider {
@@ -633,6 +651,13 @@ a > img {
     
     .top-txt {
     max-width: 830px;  
+    }
+    
+    ul:not(.slides) {
+         margin-left: 15px;
+       @include respond-to($screen-sm) {
+        margin-left: 0px;
+        }
     }
     
     ul:not(.slides) li {
@@ -687,9 +712,9 @@ p.quote-attribute {
             margin-right: auto;
             left: 0;
             right: 0;
-            top:40%;
+            top:43%;
              @include font-size(33px);
-            letter-spacing: 1px;
+            letter-spacing:normal;
             color:#fff;
             text-transform: uppercase;
             line-height: 33px;
@@ -764,7 +789,7 @@ p.quote-attribute {
 
 .about {
     p {
-         @include font-size(15px);
+         @include font-size(16px);
         color: $gray-txt;
     }
     
@@ -796,8 +821,8 @@ p.quote-attribute {
 }
 
 .text-slider-full {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     
     .flexslider .slides img{
         display: none;
@@ -887,7 +912,9 @@ p.quote-attribute {
     
      margin-bottom: 60px;
     &> div:first-child {
+         @include respond-to($screen-sm) {
         margin-right: 30px;
+         }
     }
     
     & div {
@@ -963,7 +990,7 @@ div.page-top {
 
 .contact {
     p, div.contact-info {
-         @include font-size(15px);
+         @include font-size(16px);
         color: $gray-txt;
     }
     
@@ -1061,21 +1088,21 @@ h3.green a {
      color:#f74616;
     margin-top: 170px;
     margin-left:10px;
-    margin-right: 10px;
+    margin-right: 20px;
     position: relative;
      margin-top: 100px;
     margin-bottom: 30px;
     
       @include respond-to($screen-sm) {
            margin-left:0px;
-        margin-right: 0px;
+        margin-right: 20px;
            margin-top: 170px;
           margin-bottom: 10px;
       }
     
     p {
     
-       @include font-size(15px);
+       @include font-size(16px);
     }
     
     &:before {
@@ -1085,7 +1112,10 @@ h3.green a {
         position: absolute;
       
          top: -70px;
+         left: 10px;
+         @include respond-to($screen-sm) {
         left: 0px;
+         }
         display: inline-block;
     
     }
