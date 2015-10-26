@@ -38,7 +38,9 @@
                                 ?>
                                     
                                     <div class="col-sm-4">
-                                        <a href="<?php echo get_page_link( $page->ID ); ?>"><div class="bg-img relatedprojects" style="background-image: url('<?php echo $url ?>')"></div> </a>
+                                        <a href="<?php echo get_page_link( $page->ID ); ?>"><div class="bg-img relatedprojects" style="background-image: url('<?php echo $url ?>')">
+                                            <div class="img-overlay"><span class="link">View Full Project &gt;</span></div>
+                                            </div> </a>
                                        <div class="txt"> 
                                         <h2><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h2>
                                        

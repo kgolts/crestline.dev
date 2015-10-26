@@ -202,6 +202,27 @@
                     "tabs": "all",
                     "toolbar": "basic",
                     "media_upload": 1
+                },
+                {
+                    "key": "field_562eaab9de1ba",
+                    "label": "image overlay text",
+                    "name": "image_overlay_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
                 }
             ]
         }
@@ -223,5 +244,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1442357566
+    "modified": 1445898959
 }
