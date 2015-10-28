@@ -53,6 +53,95 @@
         </div>
         
     </div>
+    
+    
+    <?php if( have_rows('image_layout') ): // check if the flexible content field has rows of data ?>
+    
+   <?php  while ( have_rows('image_layout') ) : the_row();  // loop through the rows of data ?>
+  <div class="container-fluid mobile-row-padding">
+     <?php  if( get_row_layout() == 'layout_1' ): ?>
+
+        <div class="row bottom-pad">
+          <div class="col-lg-4  col-sm-5 marquee-margin right">
+                     <div class="row">
+                      <div class="col-sm-12">
+                            <div class="bg-img home-2-img" style="background-image: url('<?php the_sub_field('small_image_1'); ?>')"></div>
+                    </div>
+                     <div class="col-sm-12"> 
+                         <div class="bg-img about-3-img" style="background-image: url('<?php the_sub_field('small_image_2'); ?>')"></div>
+
+                    </div>
+                    </div>
+                </div>
+               <div class="col-lg-8 col-sm-7">
+                    <div class="bg-img about-1-img" style="background-image: url('<?php the_sub_field('big_image_3'); ?>')">
+                    </div>
+                </div>
+
+    </div>
+
+      <?php  elseif( get_row_layout() == 'layout_2' ): ?>
+
+        <div class="row bottom-pad">
+           <div class="col-lg-8 col-sm-7">
+                    <div class="bg-img about-1-img" style="background-image: url('<?php the_sub_field('big_image_1'); ?>')">
+                    </div>
+                </div>
+          <div class="col-lg-4  col-sm-5 marquee-margin">
+                     <div class="row">
+                      <div class="col-sm-12">
+                            <div class="bg-img home-2-img" style="background-image: url('<?php the_sub_field('small_image_2'); ?>')"></div>
+                    </div>
+                     <div class="col-sm-12"> 
+                         <div class="bg-img about-3-img" style="background-image: url('<?php the_sub_field('small_image_3'); ?>')"></div>
+
+                    </div>
+                    </div>
+                </div>
+        </div>
+      
+      
+      <?php  elseif( get_row_layout() == 'layout_3' ): ?>
+
+        <div class="row text-center center-block  col-padding">
+            <div class="related-projects col-sm-4">
+                <div class="bg-img  relatedprojects" style="background-image: url('<?php the_sub_field('image_1'); ?>')">
+                </div>
+
+            </div>
+             <div class="related-projects col-sm-4">
+                <div class="bg-img  relatedprojects" style="background-image: url('<?php the_sub_field('image_2'); ?>')">
+                </div>
+
+            </div>
+             <div class="related-projects col-sm-4">
+                <div class="bg-img  relatedprojects" style="background-image: url('<?php the_sub_field('image_3'); ?>')">
+                </div>
+
+            </div>
+        </div>
+      
+    <?php  elseif( get_row_layout() == 'layout_4' ): ?>
+
+        <div class="row bottom-pad">
+            <div class="col-sm-12">
+                <div class="bg-img promo-img no-margin" style="background-image: url('<?php the_sub_field('image'); ?>')">
+            </div>
+        </div>
+      </div>
+    
+      
+      <?php    endif; ?>
+      
+    </div>
+     <?php    endwhile; ?>
+
+ <?php else :
+
+    // no layouts found
+
+endif;
+?>
 		
 </div><!-- #primary -->
 
@@ -131,11 +220,20 @@ function new_map( $el ) {
 function add_marker( $marker, map ) {
     
 
-    var imgurl = '/wp-content/themes/crestline/public/images/icon-map-marker.png';
-
-
+    var url = '/wp-content/themes/crestline/public/images/icon-map-marker-latest.png';
+    var size = new google.maps.Size(46, 53);
+ 
     if(window.devicePixelRatio > 1.5){
-       var imgurl = '/wp-content/themes/crestline/public/images/icon-map-marker@2x.png';
+        url = '/wp-content/themes/crestline/public/images/icon-map-marker-latest@2x.png';
+        size = new google.maps.Size(92, 106);
+    }
+ 
+    var image = {
+        url: url,
+        size: size,
+        scaledSize: new google.maps.Size(46, 53),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(23, 37)
     }
 
 	// var
@@ -145,7 +243,7 @@ function add_marker( $marker, map ) {
 	var marker = new google.maps.Marker({
 		position	: latlng,
 		map			: map,
-        icon        : imgurl
+        icon        : image
 	});
 
 	// add to array

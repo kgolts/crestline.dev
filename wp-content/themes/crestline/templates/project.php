@@ -15,31 +15,38 @@
     ?></h4>
                 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                 <h3><?php the_field ('location_title' ); ?></h3>
-                    </div>
-            </div>
-            <?php if( get_field( "alert_text" ) ): ?>
-                  <div class="col-sm-3 col-md-offset-1">
-                      <div class="alert-text txt">
+                    
+                </div>
+                <?php if( get_field( "alert_text" ) ): ?>
+                 
+                      <div class="alert-text txt  visible-xs">
                         <?php the_field('alert_text'); ?>
                       </div>
-                </div>
-                <?php endif; ?>
-        </div>
-        
-         <div class="row">
-            <div class="col-sm-8 max-lg">
-                <div class="txt top-txt">
+                 <?php endif; ?>
+                
+                 <div class="txt top-txt">
                 <?php the_content(); ?>
                 </div>
-             </div>
-           
-            
-             <div class="col-sm-3 col-md-offset-1">
-                 <?php if( get_field( "features_list" ) ): ?>
+            </div>
+             <div class="col-sm-4 col-md-3 col-md-offset-1">
+            <?php if( get_field( "alert_text" ) ): ?>
+                 
+                      <div class="alert-text txt hidden-xs">
+                        <?php the_field('alert_text'); ?>
+                      </div>
+                 <?php else : ?>
+                     <div class="no-alert-text txt">
+                    </div>
+                <?php endif; ?>
+            <?php if( get_field( "features_list" ) ): ?>
+                    <div class="features-list">
                     <?php the_field('features_list'); ?>
+                   </div>
                 <?php endif; ?>
             </div>
         </div>
+        
+        
         
         <div class="row">
             <div class="col-sm-12">
@@ -84,6 +91,7 @@
                 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
                 <a href="<?php the_permalink(); ?>"><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $url ?>')">
                 <div class="title"><?php the_title(); ?></div>
+                    <div class="img-overlay"></div>
                 </div></a>
                 </div>
                 <?php endforeach; ?>
@@ -171,11 +179,27 @@ function new_map( $el ) {
 function add_marker( $marker, map ) {
     
 
-    var imgurl = '/wp-content/themes/crestline/public/images/icon-map-marker.png';
-
-
+//    var imgurl = '/wp-content/themes/crestline/public/images/icon-map-marker.png';
+//
+//
+//    if(window.devicePixelRatio > 1.5){
+//       var imgurl = '/wp-content/themes/crestline/public/images/icon-map-marker@2x.png';
+//    }
+    
+     var url = '/wp-content/themes/crestline/public/images/icon-map-marker-latest.png';
+    var size = new google.maps.Size(46, 53);
+ 
     if(window.devicePixelRatio > 1.5){
-       var imgurl = '/wp-content/themes/crestline/public/images/icon-map-marker@2x.png';
+        url = '/wp-content/themes/crestline/public/images/icon-map-marker-latest@2x.png';
+        size = new google.maps.Size(92, 106);
+    }
+ 
+    var image = {
+        url: url,
+        size: size,
+        scaledSize: new google.maps.Size(46, 53),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(23, 37)
     }
 
 	// var
@@ -185,7 +209,7 @@ function add_marker( $marker, map ) {
 	var marker = new google.maps.Marker({
 		position	: latlng,
 		map			: map,
-        icon        : imgurl
+        icon        : image
 	});
 
 	// add to array

@@ -308,7 +308,7 @@ div.page {
      @include respond-to($screen-sm) {
     background: rgba(3,181,85,0.0);
     overflow: hidden;
-    height: 100%;
+    height: inherit;
     z-index: 2;
    
      @include transition($transition200);
@@ -928,6 +928,11 @@ p.quote-attribute {
     padding-bottom: 10px;
 }
 
+.top-pad {
+    padding-top: 10px;
+}
+
+
 .no-margin {
     margin-top: 0px !important;
 }
@@ -1007,7 +1012,7 @@ p.quote-attribute {
 }
 
 
-.projects .header-txt, .project .header-txt, .about .header-txt {
+.projects .header-txt, .project .header-txt, .about .header-txt, .about {
    
     div.txt, &.txt {
         max-width: 830px;
@@ -1127,6 +1132,26 @@ h3.green a {
     
 }
 
+.features-list {
+    margin-top: 20px;
+}
+
+.no-alert-text {
+     margin-top: 20px;
+    margin-left:10px;
+    margin-right: 20px;
+    position: relative;
+    
+    margin-bottom: 30px;
+    
+    @include respond-to($screen-sm) {
+           margin-left:0px;
+        margin-right: 20px;
+           margin-top: 300px;
+          margin-bottom: 10px;
+      }
+}
+
 .alert-text {
      color:#f74616;
     margin-top: 170px;
@@ -1146,6 +1171,7 @@ h3.green a {
     p {
     
        @include font-size(16px);
+         color:#f74616;
     }
     
     &:before {

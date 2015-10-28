@@ -90,7 +90,9 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
                  <div class="bg-img promo-img" style="background-image: url('<?php echo $first_promo_image ?>')">
                     <div class="center txt">
                      <h1 class="no-max-width"><?php echo $first_promo_title ?></h1>
-                     <a href="<?php echo $first_promo_button_link ?>" class="btn"><?php echo $first_promo_button_text ?></a>
+                    <?php if($first_promo_button_text != '') :?>
+                        <a href="<?php echo $first_promo_button_link ?>" class="btn"><?php echo $first_promo_button_text ?></a>
+                    <?php endif; ?>
                      </div>
                 </div>
             </div>
@@ -108,11 +110,48 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
                  <div class="bg-img promo-img" style="background-image: url('<?php echo $second_promo_image ?>')">
                     <div class="center txt">
                      <h1><?php echo $second_promo_title ?></h1>
+                    <?php if($second_promo_button_text != '') :?>
                      <a href="<?php echo $second_promo_button_link ?>" class="btn"><?php echo $second_promo_button_text ?></a>
+                    <?php endif; ?>
                      </div>
                 </div>
             </div>
      <?php endif; ?>
+        
+    
+        <?php if( have_rows('promos') ): ?>
+            <?php 
+                $row_count = count($promo_rows);
+                $current_row = 2;
+            ?>    
+        
+            <?php for ($i = $current_row; $i < $row_count; $i++) {
+                 $this_promo_row = $promo_rows[$i];
+                    $this_promo_image =  $this_promo_row['image' ]; 
+                    $this_promo_title =  $this_promo_row['title' ]; 
+                    $this_promo_button_link =  $this_promo_row['button_link' ]; 
+                    $this_promo_button_text =  $this_promo_row['button_text' ];
+                ?>
+             <?php if( $this_promo_image): ?>
+            <div class="container-fluid">
+                 <div class="bg-img promo-img" style="background-image: url('<?php echo $this_promo_image ?>')">
+                    <div class="center txt">
+                     <h1><?php echo $this_promo_title ?></h1>
+                    <?php if($this_promo_button_text != '') :?>
+                     <a href="<?php echo $this_promo_button_link ?>" class="btn"><?php echo $this_promo_button_text ?></a>
+                    <?php endif; ?>
+                     </div>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php
+                }
+            ?>
+        
+            
+          
+           
+        <?php endif; ?>
         
         
      <div class="row text-center center-block  col-padding row-related">
@@ -126,6 +165,7 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
                 <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
                 <a href="<?php the_permalink(); ?>"><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $url ?>')">
                 <div class="title"><?php the_title(); ?></div>
+                     <div class="img-overlay"></div>
                 </div></a>
                 </div>
                 <?php endforeach; ?>

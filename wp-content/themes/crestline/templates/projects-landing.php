@@ -20,7 +20,7 @@
 		                  
                               <div class="row col-padding">
                             <?php
-                                $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
+                                $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'menu_order', 'sort_order' => 'asc' ) );
                                 //col vars
                                 $colnum = 3;
                                 $counter = 0;
