@@ -60,7 +60,7 @@
     [class*="col-"]:first-child {
               padding-right: 10px !important;
             }
-          [class*="col-"]:last-child {
+          [class*="col-"]:nth-child(3) {
               padding-left: 10px !important;
             }
      }

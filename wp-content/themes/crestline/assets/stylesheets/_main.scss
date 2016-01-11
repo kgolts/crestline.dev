@@ -86,6 +86,7 @@ h1,
     	 @include font-size(120px);
           line-height: 100px;
           letter-spacing: normal;
+          margin-left: -4px;
       }
 }
 
@@ -217,6 +218,16 @@ div.page {
     }
 }
 
+.category-landing .three-col .txt {
+     @include respond-to($screen-sm) {
+            margin-left: 50px;
+           margin-right: 0px;
+          padding-left: 0px;
+    padding-right: 0px;
+           -webkit-font-smoothing: subpixel-antialiased;
+     }
+}
+
 .container-fluid.three-col .txt {
   padding-left: 0px;
     padding-right: 0px;
@@ -318,8 +329,15 @@ div.page {
 .img-overlay .link {
     opacity: 0;
    
-    
      @include respond-to($screen-sm) {
+           @include transition($transition200);
+            margin: 0 auto;
+            display: block;
+           margin-top: 130px;
+            text-align: center;
+     }
+    
+     @include respond-to($screen-md) {
            @include transition($transition200);
             margin: 0 auto;
             display: block;
@@ -531,7 +549,7 @@ a > .bg-img:hover .img-overlay .link {
 
                 padding-right: 10px !important;
                 }
-                [class*="col-"]:last-child {
+                [class*="col-"]:nth-child(3) {
 
                 padding-left: 10px !important;
                 }
@@ -642,6 +660,16 @@ span.link {
          @include font-size(16px);
         color: $gray-txt;
     }
+    
+    ol {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    ol, ol li {
+         @include font-size(16px);
+        color: $gray-txt;
+    }
 }
 
 .full-width {
@@ -741,6 +769,9 @@ p.quote-attribute {
     }
 }
 
+
+
+
 .related-projects {
     
     a:hover .title {
@@ -768,10 +799,26 @@ p.quote-attribute {
         }
   
     .title.date {
-        top:50%;
+        top:60%;
         font-size: 20px;
     }
     
+}
+
+.related-projects .abs-center {
+    position: absolute;
+     margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top:33%;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    .title {
+        position: relative;
+        top: 0;
+    }
 }
 
 .about .row-related {
@@ -967,6 +1014,19 @@ p.quote-attribute {
 
 .header-txt {
     h3 {margin-top: -10px;}
+    
+     h5 {
+        color:$gray-txt;
+        margin-top: 0px;
+    }
+    
+    p {
+        padding-bottom: 15px;
+        
+        &:last-child {
+             padding-bottom: 0px;
+        }
+    }
 }
 
 
@@ -1105,7 +1165,7 @@ h3.green a {
     @include respond-to($screen-sm) {
            margin-left:0px;
         margin-right: 20px;
-           margin-top: 300px;
+           margin-top: 100px;
           margin-bottom: 10px;
       }
 }
@@ -1166,12 +1226,14 @@ h3.green a {
     }
 }
 
-li.categories, li.cat-item {
-    list-style: none;
+li.categories, li.cat-item, div.cats {
+    list-style: none !important;
     text-transform: uppercase;
     color: #03b555;
-     font-family: $title-font-narrow;
+     font-family: $title-font-narrow !important;
      @include font-size(18px);
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
 }
 
 li.categories {
@@ -1193,7 +1255,7 @@ ul.sub-list{
  
  }
 
-.capabilities {
+.capabilities, .project .capabilities  {
     margin-top: 60px;
     padding-top: 32px;
     padding-bottom: 20px;
@@ -1203,18 +1265,19 @@ ul.sub-list{
        
           @include font-size(50px);
           letter-spacing: 1px;
+         color:#fff !important;
     }
     
     li {
-        margin-bottom: 8px;
+        margin-bottom: 8px ;
          @include font-size(15px);
-       list-style-position: outside;
-          margin-left: 1em;
+       list-style-position: outside !important;
+          margin-left: 1em !important;
         color:#fff !important;
-         //font-family: $title-font;
+         font-family:$font-family-sans-serif !important;
         
           @include respond-to($screen-sm) {
-                margin-bottom: 14px;
+                margin-bottom: 14px !important;
                @include font-size(18px);
           }
     }
@@ -1243,6 +1306,11 @@ ul.sub-list{
     
 }
 
+.capabilities.single-post {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 a[rel="prev"], a[rel="next"]  { 
      text-transform: uppercase;
    
@@ -1267,6 +1335,92 @@ a[rel="prev"] {
 }
 
 .hr {border-top: 1px solid $gray-border;}
+
+.category-landing h4 a {
+     color: $crest-green;
+    
+     @include transition($transition200);
+
+    &:hover,
+	&:focus,
+	&:active {
+	  text-decoration: none;
+	  outline: none;
+       color: $green-rollover;
+	}
+}
+
+span.gray {
+   color:$gray-txt;
+}
+
+h3.date {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.single .top-txt {
+   // margin-top: 0px;
+}
+
+.no-bottom-margin {
+    margin-bottom: 0px !important;
+}
+
+.single .three-col p {
+    max-width: none !important;
+}
+
+.related-articles {
+    margin-top: 50px;
+}
+
+.body-text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width:830px;
+     margin-left: 20px;
+    margin-right: 20px;
+    @include respond-to($screen-sm) {
+        margin-left: 45px;
+    }
+    
+    p {
+     @include font-size(16px);
+        color: $gray-txt;
+    }
+}
+
+ p {
+     
+        &.quoter {
+             @include font-size(15px);
+         line-height: 15px;
+            color: $black-txt;
+            margin-top: 15px;
+        }
+        
+         @include respond-to($screen-sm) {
+            
+             &.quoter {
+                 @include font-size(22px);
+             line-height: 22px;
+                  margin-top: 25px;
+            }
+         }
+    }
+    
+
+.search-results .page-header {
+    margin-top: 0px;
+}
+
+.news-categories.txt {
+    margin-top:0px;
+    @include respond-to($screen-sm) {
+        margin-top:35px;
+    }
+}
 
 //
 //.categories ul {

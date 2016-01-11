@@ -78,7 +78,7 @@ $second_promo_button_text =  $second_promo_row['button_text' ];
         <div class="row capabilities">
              <div class="col-sm-12">
                  <div class="txt">
-                <h3>Capabilities</h3>
+                <h3><?php the_field ('capabilities_title' ); ?></h3>
                 <?php the_field ('capabilities' ); ?>
                  </div>
             </div>

@@ -1,27 +1,28 @@
 <?php get_header(); ?>
 
-<div id="primary" class="content-area page category-landing">
+<div id="primary" class="content-area page category-landing projects">
 
         	<div class="container-fluid three-col header-txt">            
         <div class="row">
             
             <div class="col-sm-8">
             <div class="txt full-width">
-                <h4 class="top">News</h4>
+                <h4 class="top"><a href="/news/">News</a></h4>
                 
                 <?php
                       $request_path = $_SERVER['REQUEST_URI'];
                         $path = explode("/", $request_path); // splitting the path
                         $last = end($path);
                         $last = prev($path);
-                    if ( $last == 'news' || $last == 'latest')  : ?>
+                    if ( $last == 'news' )  : ?>
                      <h1 class="entry-title">
-                         <?php echo get_cat_name ( get_category_by_slug('latest')->term_id ); ?> 
+                         Latest
                     </h1>
-                        <?php echo category_description( get_category_by_slug('latest')->term_id ); ?> 
+                        <?php echo category_description( get_category_by_slug('news')->term_id ); ?> 
                    <?php else: ?>
                          <h1 class="entry-title">
-                         <?php echo get_cat_name ( get_category_by_slug($last)->term_id ); ?> 
+                             
+                         <?php echo get_cat_name ( get_category_by_slug($last)->term_id ); ?>
                     </h1>
                         <?php echo category_description( get_category_by_slug($last)->term_id ); ?> 
                    <?php endif; // end of the loop. ?>
@@ -31,7 +32,7 @@
             </div>
             
             <div class="col-sm-4">
-                  <div class="txt full-width top">
+                  <div class="txt full-width top news-categories">
                 <?php wp_list_categories('child_of=6&title_li=Categories:'); ?> 
                 </div>
             </div>
@@ -46,12 +47,12 @@
                             <?php
 
                                 if ( $last == 'news' || $last == 'latest') {
-                                    $thisCatName = 'latest';
+                                    $thisCatName = 'news';
                                 }else{
                                      $thisCatName = $last;
                                 }
 
-                                $mypages = get_posts ( array( 'category_name' => $thisCatName, 'sort_column' => 'menu_order', 'sort_order' => 'asc' ) );
+                                $mypages = get_posts ( array( 'category_name' => $thisCatName, 'sort_column' => 'date', 'sort_order' => 'asc' ) );
                                 //col vars
                                 $colnum = 3;
                                 $counter = 0;
@@ -103,7 +104,7 @@
     listClass = 'sub-list';
         
     items_count = $(this).find(listItem);    
-   if(items_count.length > 7){
+   if(items_count.length > 4){
      
     container.each(function() {
         var items_per_col = new Array(),

@@ -133,7 +133,8 @@ function new_map( $el ) {
 		zoom		: 16,
 		center		: new google.maps.LatLng(0, 0),
 		mapTypeId	: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: false
+        scrollwheel: false,
+        draggable: false
 	};
 	
 	

@@ -138,7 +138,7 @@ endif;
 
             <?php endwhile; ?>
         <?php endif; ?>
-	
+    </div>
 </div><!-- #primary -->
 
 <?php get_footer();?>
