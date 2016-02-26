@@ -71,8 +71,9 @@
         
         <?php 
         $location = get_field('map');
+        $hide_map = get_field('hide_map');
 
-        if( !empty($location) ):
+        if( !empty($location) && !$hide_map ):
         ?>
         
         <div class="acf-map">

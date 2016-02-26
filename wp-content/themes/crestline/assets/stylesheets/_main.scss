@@ -65,6 +65,16 @@ a, a > img {
 	color: $white;
 }
 
+.page .content-area  ul:not(.slides) li {
+    font-size: 1rem;
+    color: #8c847f;
+    margin-left: 15px;
+}
+
+.page .content-area  ul:not(.slides) {
+    padding: 10px 0;
+}
+
 h1,h2,h3,h4,h5,h6 {
     
   text-transform: uppercase;
@@ -214,8 +224,15 @@ div.page {
     ul {
         padding-left: 0px;
         
+      
         
     }
+}
+
+.capabilities {
+      li {
+            font-size: 18px;
+        }
 }
 
 .category-landing .three-col .txt {

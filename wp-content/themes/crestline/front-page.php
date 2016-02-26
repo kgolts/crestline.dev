@@ -132,16 +132,20 @@ done right, no matter how big or small.</p>
 		$content = get_sub_field('content');
         $url = get_sub_field('url');
          $button_text = get_sub_field('button_text');
+        $urlTarget = "";
+        if(strpbrk($url, '.pdf')){
+             $urlTarget = "_blank";
+        }
 		?>
 
 		 <div class="col-sm-4">
              
-             <a href="<?php echo $url ?>"><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $image['url'] ?>')">
+             <a href="<?php echo $url ?>" <?php if($urlTarget != ''){echo 'target="_blank"';}; ?> ><div class="bg-img  relatedprojects" style="background-image: url('<?php echo $image['url'] ?>')">
                    <div class="img-overlay"><span class="link"><?php echo get_sub_field('image_overlay_text') ?> &gt;</span></div>
                  </div></a>
             <div class="txt">
                 <?php echo $content; ?>
-                 <a href="<?php echo $url ?>" class="link"><?php echo $button_text ?></a>
+                 <a href="<?php echo $url ?>" <?php if($urlTarget != ''){echo 'target="_blank"';}; ?>  class="link"><?php echo $button_text ?></a>
             </div>
 
 		</div>
